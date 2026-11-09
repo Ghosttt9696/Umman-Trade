@@ -30,7 +30,6 @@ export default {
     requestPrice: 'Ýüz tutmak',
     learnMore: 'Giňişleýin',
     specs: 'Häsiýetnamalary',
-    otherDirections: 'Beýleki ugurlar',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram',
     openMap: 'Kartada görmek',

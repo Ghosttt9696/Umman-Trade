@@ -247,6 +247,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- sections ---------- */
 .section { padding: clamp(56px, 8vw, 104px) 0; }
 .section-alt { background: var(--cream-2); }
+/* CTA right after a white section: no double gap */
+.section:not(.section-alt) + .section-cta { padding-top: 0; }
 .section-head { max-width: 680px; margin-bottom: clamp(32px, 4vw, 48px); }
 .section-head p { color: var(--muted); font-size: 1rem; margin: 0; }
 

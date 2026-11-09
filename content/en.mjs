@@ -29,7 +29,6 @@ export default {
     requestPrice: 'Send a request',
     learnMore: 'Learn more',
     specs: 'Specifications',
-    otherDirections: 'Other business lines',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram',
     openMap: 'Open on map',

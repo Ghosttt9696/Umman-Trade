@@ -30,7 +30,6 @@ export default {
     requestPrice: 'Оставить заявку',
     learnMore: 'Подробнее',
     specs: 'Характеристики',
-    otherDirections: 'Другие направления',
     whatsapp: 'WhatsApp',
     telegram: 'Telegram',
     openMap: 'Открыть на карте',

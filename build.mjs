@@ -252,17 +252,6 @@ function directionCard(t, key) {
         </article>`;
 }
 
-function otherDirections(t, current) {
-  return `    <section class="section section-alt">
-      <div class="container">
-        <header class="section-head"><h2>${esc(t.ui.otherDirections)}</h2></header>
-        <div class="dir-grid dir-grid-3">
-        ${DIRECTIONS.filter((d) => d !== current).map((d) => directionCard(t, d)).join('\n        ')}
-        </div>
-      </div>
-    </section>`;
-}
-
 function ctaBand(t, product) {
   const actions = [
     btn(requestHref(product), t.ui.requestPrice, 'btn-accent'),
@@ -271,7 +260,7 @@ function ctaBand(t, product) {
       : '',
     `<a class="btn btn-outline" href="tel:${esc(site.phoneLink)}">${icons.phone}<span>${esc(site.phone)}</span></a>`,
   ].join('');
-  return `    <section class="section">
+  return `    <section class="section section-cta">
       <div class="container">
         <div class="cta">
           <div>
@@ -490,8 +479,6 @@ function pageYarn(t) {
       </div>
     </section>
 
-${otherDirections(t, 'yarn')}
-
 ${ctaBand(t, 'yarn')}`;
   return layout(t, 'yarn', { title: y.title, description: y.description, body });
 }
@@ -540,8 +527,6 @@ function pageExport(t) {
       </div>
     </section>
 
-${otherDirections(t, 'export')}
-
 ${ctaBand(t, 'lint')}`;
   return layout(t, 'export', { title: x.title, description: x.description, body });
 }
@@ -572,8 +557,6 @@ function pageImport(t) {
       </div>
     </section>
 
-${otherDirections(t, 'import')}
-
 ${ctaBand(t, 'caustic')}`;
   return layout(t, 'import', { title: m.title, description: m.description, body });
 }
@@ -600,8 +583,6 @@ function pageFood(t) {
         <p class="note">${esc(f.closing)}</p>
       </div>
     </section>
-
-${otherDirections(t, 'food')}
 
 ${ctaBand(t, 'food')}`;
   return layout(t, 'food', { title: f.title, description: f.description, body });
