@@ -1,0 +1,237 @@
+// =====================================================================
+//  SAÝTYŇ TEKSTLERI — TÜRKMEN DILI
+//  Dyrnaklaryň içindäki teksti üýtgediň. Meýdanlaryň atlaryny üýtgetmäň.
+//  Üýtgetmelerden soň:  node build.mjs
+//  (Тексты на туркменском — рекомендуется проверка носителем языка.)
+// =====================================================================
+
+export default {
+  code: 'tk',
+  label: 'TM',
+  langName: 'Türkmençe',
+  locale: 'tk_TM',
+
+  tagline: 'Pagta önümleriniň öndürijisi',
+  address: 'Türkmenistan, [şäheri we salgysyny görkeziň]',
+  hours: 'Duş–Şen: 09:00–18:00',
+
+  nav: {
+    home: 'Baş sahypa',
+    about: 'Biz barada',
+    products: 'Önümler',
+    production: 'Önümçilik',
+    contacts: 'Habarlaşmak',
+  },
+
+  ui: {
+    menu: 'Menýu',
+    close: 'Ýapmak',
+    requestPrice: 'Bahasyny soramak',
+    sendRequest: 'Ýüz tutmak',
+    learnMore: 'Giňişleýin',
+    allProducts: 'Ähli önümler',
+    specs: 'Häsiýetnamalary',
+    applications: 'Ulanylyşy',
+    packaging: 'Gaplanyşy we eltip berilişi',
+    advantages: 'Artykmaçlyklary',
+    otherProducts: 'Beýleki önümler',
+    callUs: 'Jaň etmek',
+    writeUs: 'Hat ýazmak',
+    whatsapp: 'WhatsApp',
+    telegram: 'Telegram',
+    openMap: 'Kartada görmek',
+    phone: 'Telefon',
+    email: 'E-poçta',
+    address: 'Salgy',
+    hours: 'Iş wagty',
+    skip: 'Esasy mazmuna geçmek',
+    rights: 'Ähli hukuklar goralan.',
+    photoPlaceholder: 'Surat goşular',
+    since: '',
+    breadcrumbHome: 'Baş sahypa',
+  },
+
+  cta: {
+    title: 'Ýüplük, lint ýa-da pagta mamygy gerekmi?',
+    text: 'Size gerek bolan möçberi we häsiýetnamalary aýdyň — bahasy we eltip bermek möhleti bilen teklip taýýarlarys.',
+  },
+
+  form: {
+    title: 'Getirip bermek üçin ýüz tutma',
+    text: 'Formany dolduryň — bir iş gününiň dowamynda siz bilen habarlaşarys.',
+    name: 'Adyňyz',
+    company: 'Kompaniýa',
+    phone: 'Telefon',
+    email: 'E-poçta',
+    product: 'Önüm',
+    productAny: 'Entek kesgitlemedim',
+    volume: 'Möçberi (aýda tonna / bir gezeklik)',
+    message: 'Bellik',
+    messagePh: 'Ýüplügiň belgisi, sorty, gaplanyşy, eltip bermegiň şertleri…',
+    submit: 'Ýüz tutmany ibermek',
+    note: 'Düwmä basanyňyzda, doldurylan ýüz tutma bilen e-poçta programmaňyz açylar.',
+    or: 'ýa-da',
+    viaWhatsapp: 'WhatsApp arkaly ibermek',
+    subject: 'Saýtdan ýüz tutma',
+    required: 'Adyňyzy we telefon belgiňizi görkeziň.',
+  },
+
+  home: {
+    title: 'Öndürijiden pagta ýüplügi, lint we pagta mamygy',
+    description: 'Umman Trade — pagta ýüplügini, pagta lintini we pagta mamygyny öndürýär we satýar. Öz önümçilik sehimiz, durnukly hil, lomaý satuw.',
+    heroEyebrow: 'Öz önümçiligimiz',
+    heroTitle: 'Pagta ýüplügi, lint we pagta mamygy — göni öndürijiden',
+    heroText: 'Pagtany öz sehimizde gaýtadan işleýäris we önümlerimizi dokma, mebel we senagat kärhanalaryna lomaý möçberde ýetirip berýäris.',
+    heroPrimary: 'Bahasyny soramak',
+    heroSecondary: 'Önümleri görmek',
+    stats: [
+      { value: '100%', label: 'tebigy pagta' },
+      { value: '3', label: 'görnüş önüm' },
+      { value: 'Öz', label: 'önümçilik sehimiz' },
+      { value: 'Lomaý', label: 'partiýalar we sargyt boýunça' },
+    ],
+    productsTitle: 'Önümlerimiz',
+    productsText: 'Üç ugur, bir hil ölçegi — ähli önümler öz sehimizde öndürilýär.',
+    whyTitle: 'Näme üçin bizi saýlaýarlar',
+    why: [
+      { icon: 'factory', title: 'Öz sehimiz', text: 'Biz araçy däl, öndüriji. Siz gaýtadan satyjylaryň goşmaçasy bolmazdan satyn alýarsyňyz we harydyň nirede öndürilendigini bilýärsiňiz.' },
+      { icon: 'check', title: 'Hil gözegçiligi', text: 'Çig maly kabul edilende, her bir taýýar partiýany bolsa iberilmezden öň barlaýarys. Häsiýetnamalar her gezek durnukly.' },
+      { icon: 'scale', title: 'Durnukly möçberler', text: 'Sehimiziň kuwwaty yzygiderli getirip bermäge we uly bir gezeklik sargytlary ýerine ýetirmäge mümkinçilik berýär.' },
+      { icon: 'truck', title: 'Ýükleme we logistika', text: 'Eltip bermegi guramaga we içerki bazar hem eksport üçin resminamalary taýýarlamaga kömek edýäris.' },
+      { icon: 'settings', title: 'Siziň talaplaryňyza görä', text: 'Ýüplügiň belgisini, lintiň sortuny we gaplanyşyny önümçiligiňiziň zerurlyklaryna görä saýlaýarys.' },
+      { icon: 'handshake', title: 'Göni aragatnaşyk', text: 'Siz göni önümçilik bilen gürleşýärsiňiz — çalt jogaplar, düşnükli şertler, dogry möhletler.' },
+    ],
+    processTitle: 'Pagtadan taýýar önüme çenli',
+    processText: 'Gaýtadan işlemegiň ähli tapgyrlary öz meýdançamyzda geçýär.',
+    process: [
+      { title: 'Çig maly kabul etmek', text: 'Pagtany hili we çyglylygy boýunça saýlamak we barlamak.' },
+      { title: 'Arassalamak', text: 'Hapalary we garyndylary aýyrmak, süýümi çigitden aýyrmak.' },
+      { title: 'Gaýtadan işlemek', text: 'Süýümi, linti we mamygy almak; ýüplügi daramak we egirmek.' },
+      { title: 'Gözegçilik', text: 'Her bir partiýany esasy görkezijiler boýunça barlamak.' },
+      { title: 'Gaplamak', text: 'Tuplara basmak, ýüplügi bobinlere saramak, bellik goýmak.' },
+      { title: 'Ýüklemek', text: 'Ylalaşylan möhletde ýükläp, müşderä ugratmak.' },
+    ],
+    productionTitle: 'Doly sikilli önümçilik',
+    productionText: 'Pagtany arassalamak, gaýtadan işlemek we egirmek üçin enjamlaşdyrylan uly öz sehimiz bar. Her tapgyra gözegçilik edýäris — şonuň üçin hil we möhletler üçin jogap berip bilýäris.',
+    productionLink: 'Önümçilik barada',
+  },
+
+  about: {
+    title: 'Biz barada',
+    description: 'Umman Trade — öz önümçilik sehi bolan pagta ýüplügi, linti we mamygy öndüriji.',
+    lead: 'Umman Trade — pagtany gaýtadan işleýän we pagta ýüplügini, linti hem-de pagta mamygyny öndürýän önümçilik kompaniýasy.',
+    paragraphs: [
+      'Biz ýönekeý pikirden başladyk: hilli pagta önümlerini çig maldan taýýar haryda çenli özümiz öndürmek. Häzir bizde uly önümçilik sehi, öz hünärmenler toparymyz we hemişelik müşderilerimiz bar.',
+      'Önümlerimizi dokma fabrikleri, mebel, düşek we pagta önümlerini öndürijiler, şeýle hem senagat kärhanalary ulanýarlar.',
+      'Biz uzak möhletli hyzmatdaşlygy gymmat hasaplaýarys. Şonuň üçin durnukly hili saklaýarys, möhletleri berjaý edýäris we müşderiniň talaplaryna uýgunlaşmaga hemişe taýýar.',
+    ],
+    valuesTitle: 'Ýörelgelerimiz',
+    values: [
+      { title: 'Hil', text: 'Her bir partiýa gözegçilik edýäris we netije üçin jogap berýäris.' },
+      { title: 'Ygtybarlylyk', text: 'Möçberler we möhletler boýunça borçnamalarymyzy ýerine ýetirýäris.' },
+      { title: 'Açyklyk', text: 'Adalatly bahalar, düşnükli şertler, önümçilik bilen göni aragatnaşyk.' },
+      { title: 'Ösüş', text: 'Enjamlarymyzy döwrebaplaşdyrýarys we önüm görnüşlerini giňeldýäris.' },
+    ],
+    missionTitle: 'Maksadymyz',
+    mission: 'Müşderileriň ýyllar boýy ynanyp biljek ygtybarly pagta önümleri üpjün edijisi bolmak.',
+  },
+
+  products: {
+    title: 'Önümler',
+    description: 'Umman Trade öndürijisinden lomaý pagta ýüplügi, pagta linti we pagta mamygy.',
+    lead: 'Pagta önümleriniň üç görnüşini öndürýäris. Aşakda esasy maglumatlar berilýär; takyk häsiýetnamalary we bahalary hünärmenlerimizden soraň.',
+    note: 'Gerek önümi tapmadyňyzmy? Bize ýazyň — belki, ony sargyt boýunça öndürip bileris.',
+  },
+
+  items: {
+    yarn: {
+      name: 'Pagta ýüplügi',
+      short: 'Örme we dokma önümçiligi üçin 100% pagtadan ýüplük.',
+      description: 'Umman Trade öndürijisinden lomaý pagta ýüplügi: 100% pagta, dürli belgiler, bobinlere saralan.',
+      intro: '100% tebigy pagtadan ýüplük. Ýumşak, berk, çyglylygy gowy siňdirýär we aňsat reňklenýär. Örme, dokma we öý dokma önümlerini öndürmek üçin laýyk.',
+      specs: [
+        ['Düzümi', '100% pagta'],
+        ['Belgisi', 'Ne 10/1 – Ne 30/1 (barlygyny soraň)'],
+        ['Görnüşi', 'daralan, pnewmomehaniki (OE) / halkaly'],
+        ['Reňki', 'tebigy (reňklenmedik)'],
+        ['Saralyşy', 'konus görnüşli bobinler'],
+      ],
+      uses: ['Örme matalar', 'Matalar we polotensalar', 'Jorap önümleri', 'Öý dokma önümleri', 'Tehniki sapaklar'],
+      packaging: 'Bobinler polietilen haltalara ýa-da gofrokartdan gutulara gaplanýar. Gapdaky bobinleriň agramy we sany alyjy bilen ylalaşylýar.',
+      features: ['Sapagyň deň galyňlygy', 'Ýokary berklik', 'Partiýadan partiýa durnukly görkezijiler'],
+    },
+    lint: {
+      name: 'Pagta linti',
+      short: 'Sellýuloza, pamyk we dokma senagaty üçin gysga pagta süýümi.',
+      description: 'Umman Trade öndürijisinden lomaý pagta linti. Basylan tuplar, partiýalar bilen getirip berilýär.',
+      intro: 'Lint — çigitden süýüm aýrylandan soň pagta çigidinde galýan gysga süýüm. Bu sellýuloza baý gymmatly çig mal. Ondan pamyk, kagyz, sellýuloza we dokalmadyk materiallar öndürilýär.',
+      specs: [
+        ['Çig maly', 'pagta çigidi'],
+        ['Sortlary', 'I we II sort (birinji we ikinji aýyrma)'],
+        ['Süýümiň uzynlygy', 'gysga süýüm (partiýa boýunça soraň)'],
+        ['Reňki', 'ak / açyk krem'],
+        ['Getirilişi', 'basylan tuplar'],
+      ],
+      uses: ['Pamyk öndürmek', 'Sellýuloza we kagyz', 'Dokalmadyk materiallar', 'Mebel we düşekler', 'Himiýa senagaty'],
+      packaging: 'Gaplaýyş matasyna ýa-da plýonka dolanan, polat lenta ýa-da sim bilen daňlan basylan tuplar. Tupuň agramy ylalaşyk boýunça.',
+      features: ['Sellýulozanyň ýokary mukdary', 'Garyndylaryň iň az mukdary', 'Amatly daşamak üçin dykyz basylan'],
+    },
+    fluff: {
+      name: 'Pagta mamygy',
+      short: 'Doldurgyçlar, pamyk önümleri we mebel üçin ýumşak pagta süýümi.',
+      description: 'Umman Trade öndürijisinden lomaý pagta mamygy — pamyk önümleri, mebel we düşekler üçin tebigy doldurgyç.',
+      intro: 'Pagta mamygy — ýumşak we ýeňil tebigy süýüm. Ýylylygy gowy saklaýar, howany geçirýär we allergiýa döretmeýär. Doldurgyç we pamyk önümleri üçin çig mal hökmünde ulanylýar.',
+      specs: [
+        ['Düzümi', '100% pagta süýümi'],
+        ['Aýratynlyklary', 'ýumşak, ýeňil, howa geçirýän'],
+        ['Reňki', 'ak / tebigy'],
+        ['Arassalanyşy', 'hapalardan we garyndylardan arassalanan'],
+        ['Getirilişi', 'basylan tuplar ýa-da haltalar'],
+      ],
+      uses: ['Ýassyk we ýorgan doldurgyjy', 'Düşekler we mebel', 'Pamyk önümleri', 'Ýylylyk saklaýjylar', 'Oýunjaklary doldurmak'],
+      packaging: 'Basylan tuplar ýa-da haltalar. Gabyň agramy alyjy bilen ylalaşylýar.',
+      features: ['Tebigy we allergiýa döretmeýär', 'Ýylylygy gowy saklaýar', 'Göwrümini aňsat dikeldýär'],
+    },
+  },
+
+  production: {
+    title: 'Önümçilik',
+    description: 'Umman Trade-iň öz önümçilik sehi: pagtany gaýtadan işlemek, ýüplük, lint we pagta mamygyny öndürmek.',
+    lead: 'Esasy baýlygymyz — pagtany gaýtadan işleýän we ähli önümlerimizi öndürýän uly öz sehimiz.',
+    paragraphs: [
+      'Önümçilikde tejribeli hünärmenler işleýär. Çig maly kabul etmekden taýýar önümi gaplamaga çenli ähli tapgyrlar bir meýdançada we biziň gözegçiligimizde geçýär.',
+      'Durnukly hilli önüm öndürmek we uly sargytlary öz wagtynda ýerine ýetirmek üçin enjamlarymyza yzygiderli hyzmat edýäris we olary täzeleýäris.',
+    ],
+    capabilitiesTitle: 'Önümçiligimizde näme bar',
+    capabilities: [
+      { icon: 'warehouse', title: 'Çig mal ammary', text: 'Pagtany degişli şertlerde saklamak.' },
+      { icon: 'filter', title: 'Arassalamak', text: 'Pagtany hapalardan we garyndylardan arassalaýan liniýa.' },
+      { icon: 'spin', title: 'Egirmek', text: 'Ýüplügi daramak we egirmek üçin enjamlar.' },
+      { icon: 'press', title: 'Basmak', text: 'Linti we mamygy tuplara basmak üçin pressler.' },
+      { icon: 'lab', title: 'Hil gözegçiligi', text: 'Her bir partiýanyň görkezijilerini barlamak.' },
+      { icon: 'box', title: 'Taýýar önüm ammary', text: 'Partiýalary saklamak we ýüklemäge taýýarlamak.' },
+    ],
+    qualityTitle: 'Hil gözegçiligi',
+    quality: [
+      'Çig maly kabul edilende barlamak: sorty, çyglylygy, hapalylygy',
+      'Gaýtadan işlemegiň her tapgyrynda gözegçilik',
+      'Her bir taýýar partiýany ugratmazdan öň barlamak',
+      'Yzarlamak üçin partiýalara bellik goýmak',
+    ],
+    galleryTitle: 'Biziň sehimiz',
+    galleryText: 'Önümçiligimizden suratlar.',
+    gallery: ['Önümçilik sehi', 'Arassalaýyş liniýasy', 'Egiriş enjamlary', 'Taýýar önüm ammary', 'Tuplary basmak', 'Ýüklemek'],
+  },
+
+  contacts: {
+    title: 'Habarlaşmak',
+    description: 'Umman Trade bilen habarlaşmak: telefon, e-poçta, önümçiligiň salgysy. Pagta ýüplügi, linti ýa-da mamygy üçin ýüz tutuň.',
+    lead: 'Siz üçin amatly usulda biz bilen habarlaşyň ýa-da ýüz tutma galdyryň — soraglaryňyza jogap bereris we täjirçilik teklibini taýýarlarys.',
+  },
+
+  notFound: {
+    title: 'Sahypa tapylmady',
+    text: 'Ol başga ýere geçirilen ýa-da pozulan bolmagy mümkin.',
+    back: 'Baş sahypa',
+  },
+};

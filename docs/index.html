@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umman Trade</title>
+  <meta name="description" content="Umman Trade — производство и продажа хлопковой пряжи, хлопкового линта и пуха. Собственный цех, стабильное качество, поставки оптом.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta http-equiv="refresh" content="1; url=ru/index.html">
+  <script>
+    (function () {
+      var codes = ["ru","en","tk"], pick = 'ru';
+      try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; else throw 0; }
+      catch (e) {
+        var nav = (navigator.languages || [navigator.language || '']).map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
+        for (var i = 0; i < nav.length; i++) { if (codes.indexOf(nav[i]) > -1) { pick = nav[i]; break; } }
+      }
+      location.replace(pick + '/index.html');
+    })();
+  </script>
+  <style>body{font:16px system-ui,sans-serif;background:#faf8f3;color:#1d2a26;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#1f4d3a;margin:0 .5em}</style>
+</head>
+<body>
+  <p><a href="ru/index.html" lang="ru">Русский</a><a href="en/index.html" lang="en">English</a><a href="tk/index.html" lang="tk">Türkmençe</a></p>
+</body>
+</html>

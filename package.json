@@ -1,0 +1,12 @@
+{
+  "name": "umman-trade-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Umman Trade — сайт производителя хлопковой пряжи, линта и пуха (RU / EN / TK)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node build.mjs && npx --yes serve docs"
+  },
+  "engines": { "node": ">=18" }
+}
