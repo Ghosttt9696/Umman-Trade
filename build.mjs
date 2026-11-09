@@ -362,7 +362,7 @@ function pageHome(t) {
             ${btn('#directions', h.heroSecondary, 'btn-outline', 'arrow')}
           </div>
         </div>
-        <div class="hero-visual">${photo('yarn-2') ? `<figure class="media media-hero"><img src="${photo('yarn-2')}" alt="${esc(t.yarn.title)}"></figure>` : ''}</div>
+        <div class="hero-visual">${media('spinning-hall', t.yarn.title, 'media-hero')}</div>
       </div>
       <div class="container">${stats(h.stats, 'stats')}</div>
     </section>

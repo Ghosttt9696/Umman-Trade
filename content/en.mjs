@@ -188,7 +188,7 @@ export default {
       ['Twist', '781 t/m, Z'],
     ],
     galleryTitle: 'The mill',
-    gallery: ['Raw material preparation', 'Bale opener', 'Bale opening line', 'ALTYN PAMYK yarn'],
+    gallery: ['Raw material preparation', 'Bale opener', 'Bale opening line', 'ALTYN PAMYK yarn', 'Open-end spinning machines', 'Spinning hall'],
   },
 
   export: {

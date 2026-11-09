@@ -189,7 +189,7 @@ export default {
       ['Towlanma', '781 tow/m, Z'],
     ],
     galleryTitle: 'Kärhana',
-    gallery: ['Çig maly taýýarlaýyş sehi', 'Tuplary ýazdyryjy', 'Tuplary ýazdyryş liniýasy', 'ALTYN PAMYK ýüplügi'],
+    gallery: ['Çig maly taýýarlaýyş sehi', 'Tuplary ýazdyryjy', 'Tuplary ýazdyryş liniýasy', 'ALTYN PAMYK ýüplügi', 'Pnewmomehaniki egriş maşynlary', 'Egriş sehi'],
   },
 
   export: {
