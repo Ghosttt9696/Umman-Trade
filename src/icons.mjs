@@ -68,7 +68,7 @@ export const illustrations = {
   yarn: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
     <ellipse cx="100" cy="146" rx="70" ry="8" fill="var(--shadow)"/>
     <path d="M90 22h20l4 120H86z" fill="var(--accent-soft)"/>
-    <path d="M74 34h52l20 104H54z" fill="var(--cream-2)"/>
+    <path d="M74 34h52l20 104H54z" fill="var(--cotton)"/>
     <clipPath id="yarn-clip"><path d="M74 34h52l20 104H54z"/></clipPath>
     <g fill="none" stroke="var(--line-strong)" stroke-width="1.6" opacity=".8" clip-path="url(#yarn-clip)">${yarnLines}</g>
     <path d="M74 34h52l20 104H54z" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round"/>
@@ -77,9 +77,9 @@ export const illustrations = {
     <path d="M146 120c14 4 22 14 18 24" fill="none" stroke="var(--line-strong)" stroke-width="2" stroke-linecap="round"/>
   </svg>`,
 
-  lint: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
+  bale: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
     <ellipse cx="100" cy="146" rx="78" ry="8" fill="var(--shadow)"/>
-    <path d="M40 54l60-22 60 22v76l-60 14-60-14z" fill="var(--cream-2)"/>
+    <path d="M40 54l60-22 60 22v76l-60 14-60-14z" fill="var(--cotton)"/>
     <path d="M40 54l60 18 60-18" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round"/>
     <path d="M100 72v72" stroke="var(--ink-soft)" stroke-width="2"/>
     <path d="M40 54l60-22 60 22v76l-60 14-60-14z" fill="none" stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round"/>
@@ -94,7 +94,7 @@ export const illustrations = {
     </g>
   </svg>`,
 
-  fluff: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
+  boll: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
     <ellipse cx="100" cy="146" rx="66" ry="8" fill="var(--shadow)"/>
     <path d="M100 140V108" stroke="var(--leaf)" stroke-width="4" stroke-linecap="round"/>
     <path d="M100 124c-12-2-20 4-24 12M100 118c12-2 20 4 24 10" fill="none" stroke="var(--leaf)" stroke-width="3" stroke-linecap="round"/>
@@ -112,6 +112,37 @@ export const illustrations = {
       <path d="M90 44q6-6 14-2"/><path d="M62 74q4-6 12-4"/><path d="M122 70q6-4 12 0"/><path d="M92 86q8 4 16 0"/>
     </g>
     <g fill="var(--accent)" opacity=".6"><circle cx="40" cy="40" r="3"/><circle cx="162" cy="34" r="2.5"/><circle cx="168" cy="96" r="2"/><circle cx="30" cy="100" r="2"/></g>
+  </svg>`,
+
+  chem: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
+    <ellipse cx="100" cy="146" rx="80" ry="8" fill="var(--shadow)"/>
+    <g stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round">
+      <path d="M38 52h52v88H38z" fill="var(--brand)"/>
+      <ellipse cx="64" cy="52" rx="26" ry="6" fill="#3b67a3"/>
+      <ellipse cx="64" cy="140" rx="26" ry="6" fill="var(--brand)"/>
+      <path d="M38 80h52M38 112h52" fill="none" stroke="#3b67a3" stroke-width="3"/>
+      <path d="M110 70h50v70h-50z" fill="#fff"/>
+      <path d="M118 70v-10h22l6 10" fill="#fff"/>
+      <rect x="132" y="50" width="12" height="10" rx="2" fill="var(--accent)"/>
+    </g>
+    <rect x="118" y="92" width="34" height="26" rx="3" fill="var(--accent-soft)"/>
+    <path d="M128 100l7 10 7-10" fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="50" y="88" width="28" height="16" rx="2" fill="#fff" opacity=".9"/>
+    <path d="M56 96h16" stroke="var(--brand)" stroke-width="2.4" stroke-linecap="round"/>
+  </svg>`,
+
+  food: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
+    <ellipse cx="100" cy="146" rx="80" ry="8" fill="var(--shadow)"/>
+    <path d="M36 140c-6-30-2-62 10-82l-6-10h56l-6 10c12 20 16 52 10 82z" fill="var(--cotton)" stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M44 58h48" stroke="var(--ink-soft)" stroke-width="2"/>
+    <path d="M52 48c6-6 26-6 32 0" fill="none" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="48" y="86" width="40" height="28" rx="3" fill="#fff" stroke="var(--line-strong)" stroke-width="1.5"/>
+    <path d="M58 96h20M58 104h14" stroke="var(--accent-2)" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M120 96h44l-6 44h-32z" fill="#fff" stroke="var(--ink-soft)" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M164 104h6a8 8 0 0 1 0 16h-8" fill="none" stroke="var(--ink-soft)" stroke-width="2"/>
+    <path d="M124 104h36" stroke="var(--brand)" stroke-width="6"/>
+    <path d="M134 86c-4-6 4-8 0-16M146 86c-4-6 4-8 0-16" fill="none" stroke="var(--line-strong)" stroke-width="2" stroke-linecap="round"/>
+    <g fill="var(--accent)"><ellipse cx="150" cy="146" rx="5" ry="3.5"/><ellipse cx="162" cy="144" rx="5" ry="3.5"/><ellipse cx="140" cy="148" rx="4.5" ry="3"/></g>
   </svg>`,
 };
 
