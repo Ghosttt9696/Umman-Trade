@@ -49,7 +49,7 @@ export default {
   },
 
   cta: {
-    title: 'Getirip bermegi ara alyp maslahatlaşalyňmy?',
+    title: '', // заголовок блока; пусто — не показывается
     text: 'Size haýsy önümiň we näçe möçberde gerekdigini aýdyň — bahasy we getirip bermegiň şertleri bilen teklip taýýarlarys.',
   },
 

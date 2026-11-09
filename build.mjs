@@ -275,7 +275,7 @@ function ctaBand(t, product) {
       <div class="container">
         <div class="cta">
           <div>
-            <h2>${esc(t.cta.title)}</h2>
+            ${t.cta.title ? `<h2>${esc(t.cta.title)}</h2>` : ''}
             <p>${esc(t.cta.text)}</p>
           </div>
           <div class="cta-actions">${actions}</div>
@@ -406,7 +406,7 @@ function pageHome(t) {
     <section class="section">
       <div class="container contact-split">
         <div >
-          <h2>${esc(t.cta.title)}</h2>
+          ${t.cta.title ? `<h2>${esc(t.cta.title)}</h2>` : ''}
           <p class="lead">${esc(t.cta.text)}</p>
           ${contactList(t)}
         </div>

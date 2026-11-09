@@ -48,7 +48,7 @@ export default {
   },
 
   cta: {
-    title: 'Let’s discuss your supply',
+    title: '', // заголовок блока; пусто — не показывается
     text: 'Tell us which products and volumes you need — we will prepare an offer with price and delivery terms.',
   },
 
