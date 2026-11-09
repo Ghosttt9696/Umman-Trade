@@ -294,7 +294,7 @@ function requestForm(t) {
     .join('');
   return `<form class="form" id="request" data-request-form novalidate
           data-endpoint="${esc(site.formEndpoint || '')}" data-email="${esc(site.email)}" data-whatsapp="${esc(site.whatsapp)}"
-          data-sending="${esc(f.sending)}" data-success="${esc(f.success)}" data-failed="${esc(f.failed)}"
+          data-sending="${esc(f.sending)}" data-success="${esc(f.success)}" data-failed="${esc(f.failed)}" data-not-activated="${esc(f.notActivated)}"
           data-subject="${esc(f.subject)}" data-required="${esc(f.required)}">
           <h2>${esc(f.title)}</h2>
           <p class="muted">${esc(f.text)}</p>

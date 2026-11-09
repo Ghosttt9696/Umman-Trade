@@ -76,6 +76,7 @@ export default {
     sending: 'Iberilýär…',
     success: 'Sag boluň! Ýüz tutmaňyz iberildi. Bir iş gününiň dowamynda siz bilen habarlaşarys.',
     failed: 'Ýüz tutmany iberip bolmady. Gaýtadan synanyşyň ýa-da bize WhatsApp arkaly ýazyň.',
+    notActivated: 'Forma entek işjeňleşdirilmedi. Saýtyň eýesi: sales@ummantrade.com poçtasyndaky FormSubmit hatyny açyň («Spam» bukjasyny hem barlaň) we «Activate Form» düwmesine basyň.',
     or: 'ýa-da',
     viaWhatsapp: 'WhatsApp arkaly ibermek',
     subject: 'Saýtdan ýüz tutma',

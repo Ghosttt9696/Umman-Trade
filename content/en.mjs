@@ -75,6 +75,7 @@ export default {
     sending: 'Sending…',
     success: 'Thank you! Your request has been sent. We will contact you within one business day.',
     failed: 'The request could not be sent. Please try again or message us on WhatsApp.',
+    notActivated: 'The form is not activated yet. Site owner: open the FormSubmit e-mail at sales@ummantrade.com (check Spam) and click “Activate Form”.',
     or: 'or',
     viaWhatsapp: 'Send via WhatsApp',
     subject: 'Website request',

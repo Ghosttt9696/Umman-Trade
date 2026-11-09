@@ -125,8 +125,9 @@
         okBox.textContent = form.getAttribute('data-success');
         okBox.hidden = false;
       })
-      .catch(function () {
-        errorBox.textContent = form.getAttribute('data-failed');
+      .catch(function (err) {
+        var needsActivation = /activat/i.test(String(err && err.message));
+        errorBox.textContent = form.getAttribute(needsActivation ? 'data-not-activated' : 'data-failed');
         errorBox.hidden = false;
       })
       .then(function () {
