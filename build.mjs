@@ -748,8 +748,9 @@ async function main() {
   if (sm) {
     await write('sitemap.xml', sm);
     await write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${site.baseUrl}/sitemap.xml\n`);
-    // custom domain for GitHub Pages (ignored by other hosts)
-    await write('CNAME', `${new URL(site.baseUrl).host}\n`);
+    // custom domain for GitHub Pages: only when baseUrl is not the github.io address
+    const host = new URL(site.baseUrl).host;
+    if (!host.endsWith('github.io')) await write('CNAME', `${host}\n`);
   }
 
   console.log(`Готово: ${count} страниц (${LANGS.map((l) => l.code).join(', ')}) → ${path.relative(ROOT, OUT)}/`);

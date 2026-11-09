@@ -67,14 +67,28 @@ docs/        ← ГОТОВЫЙ САЙТ (создаётся автоматич�
 
 ## Публикация
 
-### Вариант 1 — GitHub Pages (бесплатно)
-1. Влейте изменения в основную ветку (`main`).
-2. В репозитории на GitHub: **Settings → Pages → Build and deployment**:
-   *Source* — «Deploy from a branch», *Branch* — `main`, папка — `/docs`.
-3. Через пару минут сайт будет доступен по адресу вида `https://<имя>.github.io/Umman-Trade/`.
-4. Свой домен (например, `ummantrade.com`) подключается там же, в поле *Custom domain*.
+Сайт публикуется бесплатно через **GitHub Pages** из папки `docs/` ветки `main`.
 
-### Вариант 2 — любой хостинг
-Загрузите **содержимое** папки `docs/` в корень сайта на хостинге (через FTP или панель управления).
+### Включить (один раз)
+1. GitHub → репозиторий **Umman-Trade** → **Settings** → **Pages**.
+2. *Build and deployment* → *Source*: **Deploy from a branch**.
+3. *Branch*: **main**, папка: **/docs** → **Save**.
+4. Через 1–2 минуты сайт откроется по адресу **https://ghosttt9696.github.io/Umman-Trade/**
 
-После публикации укажите адрес сайта в `content/site.mjs` → `baseUrl` и пересоберите сайт. Так появятся `sitemap.xml` и правильные ссылки для поисковиков (Google, Яндекс).
+### Подключить домен ummantrade.com
+1. У регистратора домена (где куплен ummantrade.com) в настройках DNS добавьте записи:
+
+   | Тип | Имя | Значение |
+   |---|---|---|
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | CNAME | www | ghosttt9696.github.io |
+
+   Записи для почты (MX) не трогайте — почта sales@ummantrade.com продолжит работать.
+2. GitHub → **Settings → Pages → Custom domain**: впишите `ummantrade.com` → **Save**. Когда проверка пройдёт, включите **Enforce HTTPS**.
+3. В `content/site.mjs` поменяйте `baseUrl` на `'https://ummantrade.com'` и пересоберите сайт (`node build.mjs`).
+
+### Другой хостинг
+Можно загрузить **содержимое** папки `docs/` в корень сайта на любом хостинге (через FTP или панель управления).
