@@ -163,7 +163,7 @@ export default {
       ['Technology & equipment', 'modern Chinese'],
     ],
     features: [
-      'Modern Chinese technology and equipment',
+      'Modern technology and equipment',
       'Production set up with Chinese engineers',
       'In-house quality control laboratory',
       'Exclusive sales through UMMAN TRADE',

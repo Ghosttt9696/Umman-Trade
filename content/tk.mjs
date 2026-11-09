@@ -164,7 +164,7 @@ export default {
       ['Tehnologiýalar we enjamlar', 'döwrebap hytaý'],
     ],
     features: [
-      'Döwrebap hytaý tehnologiýalary we enjamlary',
+      'Döwrebap tehnologiýalar we enjamlar',
       'Önümçilik hytaý inženerleri bilen bilelikde ýola goýuldy',
       'Hile gözegçilik edýän öz barhanamyz',
       'Ýeke-täk satyjy — UMMAN TRADE',
