@@ -19,6 +19,12 @@ export default {
   telegram: '',                     // имя в Telegram без "@" (или '')
   email: 'sales@ummantrade.com',   // сюда приходят заявки с сайта
 
+  // Куда отправляются заявки с формы на сайте (сервис FormSubmit пересылает их на почту).
+  // После первой заявки FormSubmit пришлёт на почту письмо «Activate Form» —
+  // нажмите в нём кнопку активации. Потом можно заменить адрес почты в ссылке
+  // на секретный код из письма FormSubmit, чтобы скрыть почту от спамеров.
+  formEndpoint: 'https://formsubmit.co/ajax/sales@ummantrade.com',
+
   // Ссылка на карту (Google Maps / Яндекс / 2GIS / OpenStreetMap).
   // Если пусто — кнопка «Открыть на карте» не показывается.
   mapUrl: '',

@@ -84,9 +84,54 @@
 
     if (via === 'whatsapp' && form.getAttribute('data-whatsapp')) {
       window.open('https://wa.me/' + form.getAttribute('data-whatsapp') + '?text=' + encodeURIComponent(subject + '\n\n' + text), '_blank', 'noopener');
-    } else {
+      return;
+    }
+
+    var endpoint = form.getAttribute('data-endpoint');
+    if (!endpoint || !window.fetch) {
       location.href = 'mailto:' + form.getAttribute('data-email') +
         '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(text);
+      return;
     }
+
+    // Send the request straight to our inbox through the form service
+    var payload = { _subject: subject, _template: 'table', _captcha: 'false', _honey: form.elements._honey ? form.elements._honey.value : '' };
+    ['name', 'company', 'phone', 'email', 'product', 'volume', 'message'].forEach(function (n) {
+      var el = form.elements[n];
+      if (!el) return;
+      var v = el.tagName === 'SELECT' ? el.options[el.selectedIndex].text : el.value.trim();
+      if (v) payload[labelOf(n)] = v;
+    });
+    if (form.elements.email && form.elements.email.value.trim()) payload._replyto = form.elements.email.value.trim();
+    payload['Language / Язык'] = document.documentElement.lang;
+
+    var okBox = form.querySelector('.form-success');
+    var btn = e.submitter && e.submitter.value === 'email' ? e.submitter : form.querySelector('button[value="email"]');
+    var btnLabel = btn && btn.querySelector('span');
+    var oldLabel = btnLabel ? btnLabel.textContent : '';
+    if (btn) btn.disabled = true;
+    if (btnLabel) btnLabel.textContent = form.getAttribute('data-sending');
+    okBox.hidden = true;
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, data: d }; }); })
+      .then(function (res) {
+        if (!res.ok || String(res.data.success) !== 'true') throw new Error(res.data.message || 'send failed');
+        form.reset();
+        okBox.textContent = form.getAttribute('data-success');
+        okBox.hidden = false;
+      })
+      .catch(function () {
+        errorBox.textContent = form.getAttribute('data-failed');
+        errorBox.hidden = false;
+      })
+      .then(function () {
+        if (btn) btn.disabled = false;
+        if (btnLabel) btnLabel.textContent = oldLabel;
+      });
   });
 })();

@@ -293,7 +293,8 @@ function requestForm(t) {
     .concat(Object.entries(f.options).map(([k, v]) => `<option value="${k}">${esc(v)}</option>`))
     .join('');
   return `<form class="form" id="request" data-request-form novalidate
-          data-email="${esc(site.email)}" data-whatsapp="${esc(site.whatsapp)}"
+          data-endpoint="${esc(site.formEndpoint || '')}" data-email="${esc(site.email)}" data-whatsapp="${esc(site.whatsapp)}"
+          data-sending="${esc(f.sending)}" data-success="${esc(f.success)}" data-failed="${esc(f.failed)}"
           data-subject="${esc(f.subject)}" data-required="${esc(f.required)}">
           <h2>${esc(f.title)}</h2>
           <p class="muted">${esc(f.text)}</p>
@@ -306,7 +307,9 @@ function requestForm(t) {
             <label><span>${esc(f.volume)}</span><input name="volume"></label>
             <label class="full"><span>${esc(f.message)}</span><textarea name="message" rows="4" placeholder="${esc(f.messagePh)}"></textarea></label>
           </div>
+          <label class="form-trap" aria-hidden="true">Website<input name="_honey" tabindex="-1" autocomplete="off"></label>
           <p class="form-error" role="alert" hidden></p>
+          <p class="form-success" role="status" hidden></p>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit" value="email"><span>${esc(f.submit)}</span>${icons.mail}</button>
             ${
