@@ -112,7 +112,7 @@ export default {
     ],
     yarnEyebrow: 'ALTYN PAMYK brand',
     yarnTitle: 'Our own yarn mill',
-    yarnText: 'Open-end (OE) cotton yarn, counts Ne 16 and Ne 21. Production was set up together with Chinese engineers using modern Chinese equipment.',
+    yarnText: 'Open-end (OE) cotton yarn, counts Ne 16 and Ne 21. Production was set up together with Chinese engineers using modern equipment.',
     yarnLink: 'About yarn production',
   },
 
@@ -146,7 +146,7 @@ export default {
     lead: 'Our manufacturing business is represented by cotton yarn under the ALTYN PAMYK brand.',
     paragraphs: [
       'The mill was commissioned in 2026. Its production capacity is 5,000 tonnes of yarn.',
-      'The mill produces open-end (OE) cotton yarn in counts Ne 16 and Ne 21. Production was set up in cooperation with Chinese engineers using modern Chinese technology and equipment.',
+      'The mill produces open-end (OE) cotton yarn in counts Ne 16 and Ne 21. Production was set up in cooperation with Chinese engineers using modern technology and equipment.',
       'The mill’s products are sold exclusively under the UMMAN TRADE trade mark.',
     ],
     stats: [
@@ -160,7 +160,7 @@ export default {
       ['Spinning method', 'open-end (OE)'],
       ['Counts', 'Ne 16, Ne 21'],
       ['Production capacity', '5,000 tonnes'],
-      ['Technology & equipment', 'modern Chinese'],
+      ['Technology & equipment', 'modern'],
     ],
     features: [
       'Modern technology and equipment',

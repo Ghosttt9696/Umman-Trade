@@ -113,7 +113,7 @@ export default {
     ],
     yarnEyebrow: 'ALTYN PAMYK haryt nyşany',
     yarnTitle: 'Öz ýüplük önümçiligimiz',
-    yarnText: 'Pnewmomehaniki egriş usulyndaky (Open End) Ne 16 we Ne 21 belgili pagta ýüplügi. Önümçilik hytaý inženerleri bilen bilelikde döwrebap hytaý enjamlarynda guraldy.',
+    yarnText: 'Pnewmomehaniki egriş usulyndaky (Open End) Ne 16 we Ne 21 belgili pagta ýüplügi. Önümçilik hytaý inženerleri bilen bilelikde döwrebap enjamlarda guraldy.',
     yarnLink: 'Ýüplük önümçiligi barada',
   },
 
@@ -147,7 +147,7 @@ export default {
     lead: 'Önümçilik ugry ALTYN PAMYK haryt nyşany bilen pagta ýüplügi bilen görkezilýär.',
     paragraphs: [
       'Kärhana 2026-njy ýylda ulanylmaga berildi. Önümçilik kuwwaty 5 000 tonna ýüplük.',
-      'Kärhana pnewmomehaniki egriş usulyndaky OE (Open End) Ne 16 we Ne 21 belgili pagta ýüplügini öndürýär. Önümçilik hytaý inženerleri bilen hyzmatdaşlykda döwrebap hytaý tehnologiýalaryny we enjamlaryny ulanmak arkaly guraldy.',
+      'Kärhana pnewmomehaniki egriş usulyndaky OE (Open End) Ne 16 we Ne 21 belgili pagta ýüplügini öndürýär. Önümçilik hytaý inženerleri bilen hyzmatdaşlykda döwrebap tehnologiýalary we enjamlary ulanmak arkaly guraldy.',
       'Kärhananyň önümleri ýeke-täk UMMAN TRADE haryt nyşany bilen satylýar.',
     ],
     stats: [
@@ -161,7 +161,7 @@ export default {
       ['Egriş usuly', 'pnewmomehaniki, OE (Open End)'],
       ['Ýüplügiň belgileri', 'Ne 16, Ne 21'],
       ['Önümçilik kuwwaty', '5 000 tonna'],
-      ['Tehnologiýalar we enjamlar', 'döwrebap hytaý'],
+      ['Tehnologiýalar we enjamlar', 'döwrebap'],
     ],
     features: [
       'Döwrebap tehnologiýalar we enjamlar',
