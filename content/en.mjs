@@ -77,7 +77,7 @@ export default {
 
   home: {
     title: 'Cotton yarn, linter and fluff from the manufacturer',
-    description: 'Umman Trade manufactures and sells cotton yarn, cotton linter and cotton fluff. Own production facility, consistent quality, wholesale supply.',
+    description: 'Umman Trading manufactures and sells cotton yarn, cotton linter and cotton fluff. Own production facility, consistent quality, wholesale supply.',
     heroEyebrow: 'Own production',
     heroTitle: 'Cotton yarn, linter and fluff — direct from the manufacturer',
     heroText: 'We process cotton in our own facility and supply wholesale volumes to textile, furniture and industrial companies.',
@@ -117,8 +117,8 @@ export default {
 
   about: {
     title: 'About us',
-    description: 'Umman Trade is a manufacturer of cotton yarn, linter and fluff with its own production facility.',
-    lead: 'Umman Trade is a manufacturing company that processes cotton and produces cotton yarn, linter and fluff.',
+    description: 'Umman Trading is a manufacturer of cotton yarn, linter and fluff with its own production facility.',
+    lead: 'Umman Trading is a manufacturing company that processes cotton and produces cotton yarn, linter and fluff.',
     paragraphs: [
       'We started with a simple idea: make quality cotton products ourselves, from raw material to finished goods. Today we run a large production facility with our own team of specialists and a base of regular customers.',
       'Our products are used by textile mills, furniture, mattress and cotton wool manufacturers, as well as industrial companies.',
@@ -137,7 +137,7 @@ export default {
 
   products: {
     title: 'Products',
-    description: 'Wholesale cotton yarn, cotton linter and cotton fluff from the manufacturer Umman Trade.',
+    description: 'Wholesale cotton yarn, cotton linter and cotton fluff from the manufacturer Umman Trading.',
     lead: 'We produce three types of cotton products. Key information is below; please contact our sales team for exact specifications and prices.',
     note: 'Can’t find what you need? Contact us — we may be able to produce it to order.',
   },
@@ -146,7 +146,7 @@ export default {
     yarn: {
       name: 'Cotton yarn',
       short: '100% cotton yarn for knitting and weaving.',
-      description: 'Wholesale cotton yarn from the manufacturer Umman Trade: 100% cotton, various counts, wound on cones.',
+      description: 'Wholesale cotton yarn from the manufacturer Umman Trading: 100% cotton, various counts, wound on cones.',
       intro: 'Yarn made from 100% natural cotton. Soft, strong, highly absorbent and easy to dye. Suitable for knitting, weaving and home textiles.',
       specs: [
         ['Composition', '100% cotton'],
@@ -162,7 +162,7 @@ export default {
     lint: {
       name: 'Cotton linter',
       short: 'Short cotton fibre for the cellulose, cotton wool and textile industries.',
-      description: 'Wholesale cotton linter from the manufacturer Umman Trade. Pressed bales, supplied in batches.',
+      description: 'Wholesale cotton linter from the manufacturer Umman Trading. Pressed bales, supplied in batches.',
       intro: 'Linter is the short fibre left on cotton seeds after ginning. It is a valuable cellulose-rich raw material used to make cotton wool, paper, cellulose and nonwovens.',
       specs: [
         ['Raw material', 'cotton seeds'],
@@ -178,7 +178,7 @@ export default {
     fluff: {
       name: 'Cotton fluff',
       short: 'Soft cotton fibre for fillings, cotton wool products and furniture.',
-      description: 'Wholesale cotton fluff from the manufacturer Umman Trade — natural filling for bedding, furniture and mattresses.',
+      description: 'Wholesale cotton fluff from the manufacturer Umman Trading — natural filling for bedding, furniture and mattresses.',
       intro: 'Cotton fluff is a soft, light natural fibre. It keeps warmth well, lets air through and is hypoallergenic. Used as a filling and as raw material for cotton wool products.',
       specs: [
         ['Composition', '100% cotton fibre'],
@@ -195,7 +195,7 @@ export default {
 
   production: {
     title: 'Production',
-    description: 'Umman Trade’s own production facility: cotton processing and manufacturing of yarn, linter and fluff.',
+    description: 'Umman Trading’s own production facility: cotton processing and manufacturing of yarn, linter and fluff.',
     lead: 'Our main asset is a large production facility of our own, where we process cotton and make all our products.',
     paragraphs: [
       'Our facility is staffed by experienced specialists. Every stage — from raw material intake to packing finished goods — takes place on one site under our control.',
@@ -224,7 +224,7 @@ export default {
 
   contacts: {
     title: 'Contacts',
-    description: 'Contact Umman Trade: phone, e-mail, facility address. Request a supply of cotton yarn, linter or fluff.',
+    description: 'Contact Umman Trading: phone, e-mail, facility address. Request a supply of cotton yarn, linter or fluff.',
     lead: 'Get in touch in the way that suits you, or send a request — we will answer your questions and prepare a commercial offer.',
   },
 

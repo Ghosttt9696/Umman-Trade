@@ -78,7 +78,7 @@ export default {
 
   home: {
     title: 'Öndürijiden pagta ýüplügi, lint we pagta mamygy',
-    description: 'Umman Trade — pagta ýüplügini, pagta lintini we pagta mamygyny öndürýär we satýar. Öz önümçilik sehimiz, durnukly hil, lomaý satuw.',
+    description: 'Umman Trading — pagta ýüplügini, pagta lintini we pagta mamygyny öndürýär we satýar. Öz önümçilik sehimiz, durnukly hil, lomaý satuw.',
     heroEyebrow: 'Öz önümçiligimiz',
     heroTitle: 'Pagta ýüplügi, lint we pagta mamygy — göni öndürijiden',
     heroText: 'Pagtany öz sehimizde gaýtadan işleýäris we önümlerimizi dokma, mebel we senagat kärhanalaryna lomaý möçberde ýetirip berýäris.',
@@ -118,8 +118,8 @@ export default {
 
   about: {
     title: 'Biz barada',
-    description: 'Umman Trade — öz önümçilik sehi bolan pagta ýüplügi, linti we mamygy öndüriji.',
-    lead: 'Umman Trade — pagtany gaýtadan işleýän we pagta ýüplügini, linti hem-de pagta mamygyny öndürýän önümçilik kompaniýasy.',
+    description: 'Umman Trading — öz önümçilik sehi bolan pagta ýüplügi, linti we mamygy öndüriji.',
+    lead: 'Umman Trading — pagtany gaýtadan işleýän we pagta ýüplügini, linti hem-de pagta mamygyny öndürýän önümçilik kompaniýasy.',
     paragraphs: [
       'Biz ýönekeý pikirden başladyk: hilli pagta önümlerini çig maldan taýýar haryda çenli özümiz öndürmek. Häzir bizde uly önümçilik sehi, öz hünärmenler toparymyz we hemişelik müşderilerimiz bar.',
       'Önümlerimizi dokma fabrikleri, mebel, düşek we pagta önümlerini öndürijiler, şeýle hem senagat kärhanalary ulanýarlar.',
@@ -138,7 +138,7 @@ export default {
 
   products: {
     title: 'Önümler',
-    description: 'Umman Trade öndürijisinden lomaý pagta ýüplügi, pagta linti we pagta mamygy.',
+    description: 'Umman Trading öndürijisinden lomaý pagta ýüplügi, pagta linti we pagta mamygy.',
     lead: 'Pagta önümleriniň üç görnüşini öndürýäris. Aşakda esasy maglumatlar berilýär; takyk häsiýetnamalary we bahalary hünärmenlerimizden soraň.',
     note: 'Gerek önümi tapmadyňyzmy? Bize ýazyň — belki, ony sargyt boýunça öndürip bileris.',
   },
@@ -147,7 +147,7 @@ export default {
     yarn: {
       name: 'Pagta ýüplügi',
       short: 'Örme we dokma önümçiligi üçin 100% pagtadan ýüplük.',
-      description: 'Umman Trade öndürijisinden lomaý pagta ýüplügi: 100% pagta, dürli belgiler, bobinlere saralan.',
+      description: 'Umman Trading öndürijisinden lomaý pagta ýüplügi: 100% pagta, dürli belgiler, bobinlere saralan.',
       intro: '100% tebigy pagtadan ýüplük. Ýumşak, berk, çyglylygy gowy siňdirýär we aňsat reňklenýär. Örme, dokma we öý dokma önümlerini öndürmek üçin laýyk.',
       specs: [
         ['Düzümi', '100% pagta'],
@@ -163,7 +163,7 @@ export default {
     lint: {
       name: 'Pagta linti',
       short: 'Sellýuloza, pamyk we dokma senagaty üçin gysga pagta süýümi.',
-      description: 'Umman Trade öndürijisinden lomaý pagta linti. Basylan tuplar, partiýalar bilen getirip berilýär.',
+      description: 'Umman Trading öndürijisinden lomaý pagta linti. Basylan tuplar, partiýalar bilen getirip berilýär.',
       intro: 'Lint — çigitden süýüm aýrylandan soň pagta çigidinde galýan gysga süýüm. Bu sellýuloza baý gymmatly çig mal. Ondan pamyk, kagyz, sellýuloza we dokalmadyk materiallar öndürilýär.',
       specs: [
         ['Çig maly', 'pagta çigidi'],
@@ -179,7 +179,7 @@ export default {
     fluff: {
       name: 'Pagta mamygy',
       short: 'Doldurgyçlar, pamyk önümleri we mebel üçin ýumşak pagta süýümi.',
-      description: 'Umman Trade öndürijisinden lomaý pagta mamygy — pamyk önümleri, mebel we düşekler üçin tebigy doldurgyç.',
+      description: 'Umman Trading öndürijisinden lomaý pagta mamygy — pamyk önümleri, mebel we düşekler üçin tebigy doldurgyç.',
       intro: 'Pagta mamygy — ýumşak we ýeňil tebigy süýüm. Ýylylygy gowy saklaýar, howany geçirýär we allergiýa döretmeýär. Doldurgyç we pamyk önümleri üçin çig mal hökmünde ulanylýar.',
       specs: [
         ['Düzümi', '100% pagta süýümi'],
@@ -196,7 +196,7 @@ export default {
 
   production: {
     title: 'Önümçilik',
-    description: 'Umman Trade-iň öz önümçilik sehi: pagtany gaýtadan işlemek, ýüplük, lint we pagta mamygyny öndürmek.',
+    description: 'Umman Trading-iň öz önümçilik sehi: pagtany gaýtadan işlemek, ýüplük, lint we pagta mamygyny öndürmek.',
     lead: 'Esasy baýlygymyz — pagtany gaýtadan işleýän we ähli önümlerimizi öndürýän uly öz sehimiz.',
     paragraphs: [
       'Önümçilikde tejribeli hünärmenler işleýär. Çig maly kabul etmekden taýýar önümi gaplamaga çenli ähli tapgyrlar bir meýdançada we biziň gözegçiligimizde geçýär.',
@@ -225,7 +225,7 @@ export default {
 
   contacts: {
     title: 'Habarlaşmak',
-    description: 'Umman Trade bilen habarlaşmak: telefon, e-poçta, önümçiligiň salgysy. Pagta ýüplügi, linti ýa-da mamygy üçin ýüz tutuň.',
+    description: 'Umman Trading bilen habarlaşmak: telefon, e-poçta, önümçiligiň salgysy. Pagta ýüplügi, linti ýa-da mamygy üçin ýüz tutuň.',
     lead: 'Siz üçin amatly usulda biz bilen habarlaşyň ýa-da ýüz tutma galdyryň — soraglaryňyza jogap bereris we täjirçilik teklibini taýýarlarys.',
   },
 

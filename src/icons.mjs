@@ -30,18 +30,29 @@ export const icons = {
 };
 
 // ---------------------------------------------------------------------
-// Logo mark: stylised cotton boll inside a circle
+// Logo mark: globe (navy) with a gold crescent — vector redraw of the
+// Umman Trading logo. The navy colour follows --logo-ink so the mark
+// stays visible on dark backgrounds.
+// To use the original file instead, put logo-mark.svg / .png / .webp
+// into src/assets/img/ and rebuild.
 // ---------------------------------------------------------------------
-export const logoMark = `<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
-  <circle cx="20" cy="20" r="19" fill="var(--brand)"/>
-  <g fill="#fff">
-    <circle cx="20" cy="15" r="6"/>
-    <circle cx="13.5" cy="20" r="5.5"/>
-    <circle cx="26.5" cy="20" r="5.5"/>
-    <circle cx="20" cy="22.5" r="5.5"/>
-  </g>
-  <path d="M14 27c2 2.6 4 3.6 6 3.6s4-1 6-3.6" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round"/>
-  <path d="M20 30.6V35" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round"/>
+export const logoMarkSvg = `<svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+  <defs>
+    <linearGradient id="um-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c983"/><stop offset=".5" stop-color="#c99a45"/><stop offset="1" stop-color="#a7792c"/>
+    </linearGradient>
+    <clipPath id="um-l"><path d="M0 0H25.5C29 17 25 33 11 48H0z"/></clipPath>
+    <clipPath id="um-r"><path d="M25.5 0H48V48H11C25 33 29 17 25.5 0z"/></clipPath>
+    <g id="um-net" fill="none" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+      <circle cx="22" cy="24" r="17.8"/>
+      <path d="M4.2 24H39.8"/>
+      <path d="M22 6.2L37.4 32.9H6.6zM22 41.8L37.4 15.1H6.6z"/>
+    </g>
+  </defs>
+  <use href="#um-net" style="stroke:var(--logo-ink,#1d4579)" clip-path="url(#um-l)"/>
+  <use href="#um-net" stroke="url(#um-gold)" clip-path="url(#um-r)"/>
+  <path d="M26 3C37.8 4.6 46 13.6 46 24.4S37.6 44.4 25.4 45.4C35 40.6 40.6 33 40.6 24.2S35.4 7.6 26 3z" fill="url(#um-gold)"/>
+  <path d="M12 42.6C24.4 31.5 28.6 18 25.6 5.4" fill="none" style="stroke:var(--logo-ink,#1d4579)" stroke-width="2.6" stroke-linecap="round"/>
 </svg>`;
 
 // ---------------------------------------------------------------------
@@ -85,9 +96,9 @@ export const illustrations = {
 
   fluff: `<svg class="illu" viewBox="0 0 200 160" aria-hidden="true">
     <ellipse cx="100" cy="146" rx="66" ry="8" fill="var(--shadow)"/>
-    <path d="M100 140V108" stroke="var(--brand)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M100 124c-12-2-20 4-24 12M100 118c12-2 20 4 24 10" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round"/>
-    <path d="M64 104c8 10 24 14 36 6 12 8 28 4 36-6l-8 4-12-6-16 6-16-6-12 6z" fill="var(--brand-2)"/>
+    <path d="M100 140V108" stroke="var(--leaf)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M100 124c-12-2-20 4-24 12M100 118c12-2 20 4 24 10" fill="none" stroke="var(--leaf)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M64 104c8 10 24 14 36 6 12 8 28 4 36-6l-8 4-12-6-16 6-16-6-12 6z" fill="var(--leaf-2)"/>
     <g fill="#fff" stroke="var(--ink-soft)" stroke-width="2">
       <circle cx="100" cy="50" r="26"/>
       <circle cx="70" cy="76" r="24"/>

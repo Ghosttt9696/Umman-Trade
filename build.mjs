@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // =====================================================================
-//  Сборка сайта Umman Trade.
+//  Сборка сайта Umman Trading.
 //  Запуск:  node build.mjs
 //  Результат — готовый сайт в папке docs/ (её можно выложить на любой
 //  хостинг или опубликовать через GitHub Pages).
@@ -15,7 +15,7 @@ import site from './content/site.mjs';
 import ru from './content/ru.mjs';
 import en from './content/en.mjs';
 import tk from './content/tk.mjs';
-import { icons, logoMark, illustrations, heroArt } from './src/icons.mjs';
+import { icons, logoMarkSvg, illustrations, heroArt } from './src/icons.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SRC_ASSETS = path.join(ROOT, 'src', 'assets');
@@ -68,6 +68,12 @@ function photo(name) {
 const btn = (href, label, cls = 'btn-primary', icon = 'arrow') =>
   `<a class="btn ${cls}" href="${esc(href)}"><span>${esc(label)}</span>${icons[icon] || ''}</a>`;
 
+// Logo: original file from src/assets/img/logo-mark.* if present, otherwise the vector redraw
+const logoFile = ['svg', 'webp', 'png'].map((e) => `logo-mark.${e}`).find((f) => existsSync(path.join(SRC_ASSETS, 'img', f)));
+const logoMark = logoFile ? `<img class="logo-mark" src="../assets/img/${logoFile}" alt="" width="48" height="48">` : logoMarkSvg;
+const [nameFirst, ...nameRest] = site.name.split(' ');
+const logoText = `<span class="logo-text"><span class="logo-l1">${esc(nameFirst)}</span>${nameRest.length ? `<span class="logo-l2">${esc(nameRest.join(' '))}</span>` : ''}</span>`;
+
 const requestHref = (product) => `contacts.html${product ? `?product=${product}` : ''}#request`;
 
 // ---------------------------------------------------------------------
@@ -102,7 +108,7 @@ function layout(t, pageKey, { title, description, body, activeNav }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(fullTitle)}</title>
   <meta name="description" content="${esc(description)}">
-  <meta name="theme-color" content="#1f4d3a">
+  <meta name="theme-color" content="#1d4579">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="${esc(site.name)}">
   <meta property="og:title" content="${esc(fullTitle)}">
@@ -121,7 +127,7 @@ function layout(t, pageKey, { title, description, body, activeNav }) {
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="${esc(site.name)} — ${esc(t.nav.home)}">
         ${logoMark}
-        <span class="logo-text"><strong>${esc(site.name)}</strong><small>${esc(t.tagline)}</small></span>
+        ${logoText}
       </a>
 
       <nav class="nav" id="site-nav" aria-label="${esc(t.ui.menu)}" data-nav>
@@ -157,7 +163,8 @@ function footer(t) {
   return `  <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a class="logo logo-light" href="index.html">${logoMark}<span class="logo-text"><strong>${esc(site.name)}</strong><small>${esc(t.tagline)}</small></span></a>
+        <a class="logo logo-light" href="index.html">${logoMark}${logoText}</a>
+        <p class="footer-tagline">${esc(t.tagline)}</p>
         <p>${esc(t.home.heroText)}</p>
       </div>
       <div>
@@ -563,7 +570,7 @@ function rootIndex() {
       location.replace(pick + '/index.html');
     })();
   </script>
-  <style>body{font:16px system-ui,sans-serif;background:#faf8f3;color:#1d2a26;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#1f4d3a;margin:0 .5em}</style>
+  <style>body{font:16px system-ui,sans-serif;background:#faf8f3;color:#16233a;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#1d4579;margin:0 .5em}</style>
 </head>
 <body>
   <p>${LANGS.map((l) => `<a href="${l.code}/index.html" lang="${l.code}">${esc(l.langName)}</a>`).join('')}</p>
@@ -583,10 +590,10 @@ function notFound() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>404 — ${esc(site.name)}</title>
   <style>
-    body{font:16px system-ui,sans-serif;background:#faf8f3;color:#1d2a26;margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}
+    body{font:16px system-ui,sans-serif;background:#faf8f3;color:#16233a;margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}
     main{display:grid;gap:32px;max-width:640px}
     h1{margin:0 0 4px;font-size:1.4rem}p{margin:0 0 12px;color:#5a6762}
-    .btn{display:inline-block;padding:10px 18px;border-radius:999px;background:#1f4d3a;color:#fff;text-decoration:none}
+    .btn{display:inline-block;padding:10px 18px;border-radius:999px;background:#1d4579;color:#fff;text-decoration:none}
     .code{font-size:5rem;font-weight:800;color:#c8963e;line-height:1}
   </style>
 </head>
