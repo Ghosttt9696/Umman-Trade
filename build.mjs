@@ -335,7 +335,6 @@ function contactList(t) {
     [icons.phone, t.ui.phone, `<a href="tel:${esc(site.phoneLink)}">${esc(site.phone)}</a>`],
     [icons.mail, t.ui.email, `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>`],
     [icons.pin, t.ui.address, `<span>${esc(t.address)}</span>${site.mapUrl ? `<a class="link-arrow" href="${esc(site.mapUrl)}" target="_blank" rel="noopener">${esc(t.ui.openMap)}${icons.arrow}</a>` : ''}`],
-    [icons.clock, t.ui.hours, `<span>${esc(t.hours)}</span>`],
   ];
   return `<ul class="contact-list">${items
     .map(([ic, label, val]) => `<li><span class="contact-icon">${ic}</span><div><small>${esc(label)}</small>${val}</div></li>`)

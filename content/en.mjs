@@ -12,7 +12,6 @@ export default {
 
   tagline: 'Manufacturing, export, import and distribution in Turkmenistan',
   address: 'Turkmenistan, [city and street address]',
-  hours: 'Mon–Sat: 09:00–18:00',
 
   nav: {
     home: 'Home',
@@ -37,7 +36,6 @@ export default {
     phone: 'Phone',
     email: 'E-mail',
     address: 'Address',
-    hours: 'Working hours',
     skip: 'Skip to content',
     rights: 'All rights reserved.',
     photoPlaceholder: 'Photo coming soon',

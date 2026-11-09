@@ -13,7 +13,6 @@ export default {
 
   tagline: 'Türkmenistanda önümçilik, eksport, import we paýlaýyş',
   address: 'Türkmenistan, [şäheri we salgysyny görkeziň]',
-  hours: 'Duş–Şen: 09:00–18:00',
 
   nav: {
     home: 'Baş sahypa',
@@ -38,7 +37,6 @@ export default {
     phone: 'Telefon',
     email: 'E-poçta',
     address: 'Salgy',
-    hours: 'Iş wagty',
     skip: 'Esasy mazmuna geçmek',
     rights: 'Ähli hukuklar goralan.',
     photoPlaceholder: 'Surat goşular',
