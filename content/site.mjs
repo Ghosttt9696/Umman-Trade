@@ -9,11 +9,8 @@ export default {
   name: 'Umman Trading',
 
   // Адрес сайта, без "/" в конце. Нужен для карты сайта (sitemap.xml),
-  // ссылок для поисковиков и превью в соцсетях.
-  // Сейчас сайт работает на бесплатном адресе GitHub Pages.
-  // Когда настроите DNS домена ummantrade.com (см. README), замените на:
-  //   baseUrl: 'https://ummantrade.com',
-  baseUrl: 'https://ghosttt9696.github.io/Umman-Trade',
+  // ссылок для поисковиков, превью в соцсетях и привязки домена (файл CNAME).
+  baseUrl: 'https://ummantrade.com',
 
   // ---- Контакты -------------------------------------------------------
   phone: '+993 65 06-06-60',        // как показывать на сайте
