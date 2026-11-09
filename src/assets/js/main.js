@@ -38,22 +38,6 @@
     window.matchMedia('(min-width: 1121px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
   }
 
-  // ---------- reveal on scroll ----------
-  var items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach(function (el, i) {
-      el.style.transitionDelay = Math.min((i % 6) * 60, 300) + 'ms';
-      io.observe(el);
-    });
-  } else {
-    items.forEach(function (el) { el.classList.add('is-visible'); });
-  }
-
   // ---------- request form ----------
   var form = document.querySelector('[data-request-form]');
   if (!form) return;

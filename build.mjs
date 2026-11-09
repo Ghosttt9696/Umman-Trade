@@ -84,7 +84,7 @@ const logoText = `<span class="logo-text"><span class="logo-l1">${esc(nameFirst)
 
 const requestHref = (product) => `contacts.html${product ? `?product=${product}` : ''}#request`;
 
-/** Muted looping video with poster, or the poster/photo alone if the video is missing. */
+/** Muted looping video that starts automatically, with a poster frame. */
 function media(name, label, cls = '') {
   const poster = photo(`${name}-poster`);
   if (hasVideo(name)) {
@@ -240,7 +240,7 @@ function directionCard(t, key) {
   const d = t.directions[key];
   const m = DIRECTION_MEDIA[key];
   const img = photo(m.photo);
-  return `<article class="dir-card reveal">
+  return `<article class="dir-card">
           <a class="dir-card-media${img ? ' has-photo' : ''}" href="${PAGES[key]}" tabindex="-1" aria-hidden="true">${
             img ? `<img src="${img}" alt="" loading="lazy">` : illustrations[m.illu]
           }</a>
@@ -255,7 +255,7 @@ function directionCard(t, key) {
 function otherDirections(t, current) {
   return `    <section class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(t.ui.otherDirections)}</h2></header>
+        <header class="section-head"><h2>${esc(t.ui.otherDirections)}</h2></header>
         <div class="dir-grid dir-grid-3">
         ${DIRECTIONS.filter((d) => d !== current).map((d) => directionCard(t, d)).join('\n        ')}
         </div>
@@ -267,13 +267,13 @@ function ctaBand(t, product) {
   const actions = [
     btn(requestHref(product), t.ui.requestPrice, 'btn-accent'),
     site.whatsapp
-      ? `<a class="btn btn-ghost-light" href="https://wa.me/${esc(site.whatsapp)}" target="_blank" rel="noopener">${icons.whatsapp}<span>${esc(t.ui.whatsapp)}</span></a>`
+      ? `<a class="btn btn-whatsapp" href="https://wa.me/${esc(site.whatsapp)}" target="_blank" rel="noopener">${icons.whatsapp}<span>${esc(t.ui.whatsapp)}</span></a>`
       : '',
-    `<a class="btn btn-ghost-light" href="tel:${esc(site.phoneLink)}">${icons.phone}<span>${esc(site.phone)}</span></a>`,
+    `<a class="btn btn-outline" href="tel:${esc(site.phoneLink)}">${icons.phone}<span>${esc(site.phone)}</span></a>`,
   ].join('');
   return `    <section class="section">
       <div class="container">
-        <div class="cta reveal">
+        <div class="cta">
           <div>
             <h2>${esc(t.cta.title)}</h2>
             <p>${esc(t.cta.text)}</p>
@@ -289,7 +289,7 @@ function gallery(t, prefix, captions) {
         ${captions
           .map((cap, i) => {
             const src = photo(`${prefix}-${i + 1}`);
-            return `<figure class="photo reveal${src ? '' : ' photo-empty'}">
+            return `<figure class="photo${src ? '' : ' photo-empty'}">
           ${src ? `<img src="${src}" alt="${esc(cap)}" loading="lazy">` : `<div class="photo-ph">${icons.box}<span>${esc(t.ui.photoPlaceholder)}</span></div>`}
           <figcaption>${esc(cap)}</figcaption>
         </figure>`;
@@ -359,17 +359,17 @@ function pageHome(t) {
           <p class="hero-text">${esc(h.heroText)}</p>
           <div class="hero-actions">
             ${btn(requestHref(), h.heroPrimary, 'btn-accent')}
-            ${btn('#directions', h.heroSecondary, 'btn-ghost-light', 'arrow')}
+            ${btn('#directions', h.heroSecondary, 'btn-outline', 'arrow')}
           </div>
         </div>
-        <div class="hero-visual">${media('yarn-cones', t.yarn.title, 'media-hero')}</div>
+        <div class="hero-visual">${photo('yarn-2') ? `<figure class="media media-hero"><img src="${photo('yarn-2')}" alt="${esc(t.yarn.title)}"></figure>` : ''}</div>
       </div>
       <div class="container">${stats(h.stats, 'stats')}</div>
     </section>
 
     <section class="section" id="directions">
       <div class="container">
-        <header class="section-head reveal">
+        <header class="section-head">
           <h2>${esc(h.directionsTitle)}</h2>
           <p>${esc(h.directionsText)}</p>
         </header>
@@ -379,14 +379,14 @@ function pageHome(t) {
       </div>
     </section>
 
-    <section class="section section-dark">
+    <section class="section">
       <div class="container split">
-        <div class="split-media reveal">${media('yarn-mill', t.yarn.title, 'media-tall')}</div>
-        <div class="reveal">
+        <div class="split-media">${media('yarn-mill', t.yarn.title, 'media-tall')}</div>
+        <div >
           <p class="eyebrow">${esc(h.yarnEyebrow)}</p>
           <h2>${esc(h.yarnTitle)}</h2>
           <p>${esc(h.yarnText)}</p>
-          ${stats(t.yarn.stats, 'stat-row-dark')}
+          ${stats(t.yarn.stats)}
           ${btn('yarn.html', h.yarnLink, 'btn-accent')}
         </div>
       </div>
@@ -394,10 +394,10 @@ function pageHome(t) {
 
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(h.whyTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(h.whyTitle)}</h2></header>
         <div class="feature-grid">
           ${h.why
-            .map((w) => `<div class="feature reveal"><span class="feature-icon">${icons[w.icon]}</span><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p></div>`)
+            .map((w) => `<div class="feature"><span class="feature-icon">${icons[w.icon]}</span><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p></div>`)
             .join('\n          ')}
         </div>
       </div>
@@ -405,12 +405,12 @@ function pageHome(t) {
 
     <section class="section">
       <div class="container contact-split">
-        <div class="reveal">
+        <div >
           <h2>${esc(t.cta.title)}</h2>
           <p class="lead">${esc(t.cta.text)}</p>
           ${contactList(t)}
         </div>
-        <div class="reveal">${requestForm(t)}</div>
+        <div >${requestForm(t)}</div>
       </div>
     </section>`;
   return layout(t, 'home', { title: h.title, description: h.description, body });
@@ -422,8 +422,8 @@ function pageAbout(t) {
 
     <section class="section">
       <div class="container split split-top">
-        <div class="prose reveal">${a.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
-        <aside class="fact-card reveal">
+        <div class="prose">${a.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
+        <aside class="fact-card">
           ${logoMark}
           <dl>${t.home.stats.map((s) => `<div><dt>${esc(s.value)}</dt><dd>${esc(s.label)}</dd></div>`).join('')}</dl>
         </aside>
@@ -432,15 +432,15 @@ function pageAbout(t) {
 
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(a.valuesTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(a.valuesTitle)}</h2></header>
         <div class="values">
-          ${a.values.map((v, i) => `<div class="value reveal"><span class="value-n">${String(i + 1).padStart(2, '0')}</span><h3>${esc(v.title)}</h3><p>${esc(v.text)}</p></div>`).join('\n          ')}
+          ${a.values.map((v, i) => `<div class="value"><span class="value-n">${String(i + 1).padStart(2, '0')}</span><h3>${esc(v.title)}</h3><p>${esc(v.text)}</p></div>`).join('\n          ')}
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container narrow reveal">
+      <div class="container narrow">
         <h2>${esc(a.requisitesTitle)}</h2>
         ${table(a.requisites)}
       </div>
@@ -456,8 +456,8 @@ function pageYarn(t) {
 
     <section class="section">
       <div class="container split split-top">
-        <div class="split-media reveal">${media('yarn-mill', y.title, 'media-tall')}</div>
-        <div class="reveal">
+        <div class="split-media">${media('yarn-mill', y.title, 'media-tall')}</div>
+        <div >
           <div class="prose">${y.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
           ${stats(y.stats)}
           ${ticks(y.features)}
@@ -468,7 +468,7 @@ function pageYarn(t) {
 
     <section class="section section-alt">
       <div class="container detail-grid">
-        <div class="reveal">
+        <div >
           <h2>${esc(t.ui.specs)}</h2>
           ${table(y.specs)}
           <div class="callout">
@@ -476,7 +476,7 @@ function pageYarn(t) {
             <div><h3>${esc(y.labTitle)}</h3><p>${esc(y.labText)}</p></div>
           </div>
         </div>
-        <div class="reveal">
+        <div >
           <h2>${esc(y.testsTitle)}</h2>
           ${table(y.tests, 'specs specs-compact')}
           <p class="table-note">${esc(y.testsNote)}</p>
@@ -486,7 +486,7 @@ function pageYarn(t) {
 
     <section class="section">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(y.galleryTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(y.galleryTitle)}</h2></header>
         ${gallery(t, 'yarn', y.gallery)}
       </div>
     </section>
@@ -503,8 +503,8 @@ function pageExport(t) {
 
     <section class="section">
       <div class="container split split-top">
-        <div class="split-media reveal">${media('cotton-bales', x.videoLabel, 'media-tall')}</div>
-        <div class="reveal">
+        <div class="split-media">${media('cotton-bales', x.videoLabel, 'media-tall')}</div>
+        <div >
           ${stats(x.stats)}
           <div class="prose">${x.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
           <div class="callout">
@@ -518,11 +518,11 @@ function pageExport(t) {
 
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(x.itemsTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(x.itemsTitle)}</h2></header>
         <div class="item-grid">
           ${x.items
             .map(
-              (it) => `<article class="item-card reveal">
+              (it) => `<article class="item-card">
             <div class="item-card-media">${illustrations[it.illu]}</div>
             <h3>${esc(it.name)}</h3>
             <p>${esc(it.text)}</p>
@@ -536,7 +536,7 @@ function pageExport(t) {
 
     <section class="section">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(x.galleryTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(x.galleryTitle)}</h2></header>
         ${gallery(t, 'export', x.gallery)}
       </div>
     </section>
@@ -553,11 +553,11 @@ function pageImport(t) {
 
     <section class="section">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(m.itemsTitle)}</h2></header>
+        <header class="section-head"><h2>${esc(m.itemsTitle)}</h2></header>
         <div class="item-grid item-grid-2">
           ${m.items
             .map(
-              (it) => `<article class="item-card reveal">
+              (it) => `<article class="item-card">
             <div class="item-card-media">${illustrations.chem}</div>
             <h3>${esc(it.name)}</h3>
             <p>${esc(it.text)}</p>
@@ -566,7 +566,7 @@ function pageImport(t) {
             )
             .join('\n          ')}
         </div>
-        <div class="callout callout-wide reveal">
+        <div class="callout callout-wide">
           <span class="feature-icon">${icons.check}</span>
           <div><h3>${esc(m.licenseTitle)}</h3><p>${esc(m.licenseText)}</p></div>
         </div>
@@ -585,20 +585,20 @@ function pageFood(t) {
 
     <section class="section">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(f.brandsTitle)}</h2><p>${esc(f.brandsText)}</p></header>
+        <header class="section-head"><h2>${esc(f.brandsTitle)}</h2><p>${esc(f.brandsText)}</p></header>
         <div class="brand-grid">
-          ${f.brands.map((b) => `<div class="brand-tile reveal"><strong>${esc(b.name)}</strong><span>${esc(b.origin)}</span></div>`).join('\n          ')}
+          ${f.brands.map((b) => `<div class="brand-tile"><strong>${esc(b.name)}</strong><span>${esc(b.origin)}</span></div>`).join('\n          ')}
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head reveal"><h2>${esc(f.staplesTitle)}</h2><p>${esc(f.staplesText)}</p></header>
+        <header class="section-head"><h2>${esc(f.staplesTitle)}</h2><p>${esc(f.staplesText)}</p></header>
         <div class="staple-grid">
-          ${f.staples.map((s) => `<div class="staple reveal"><h3>${esc(s.name)}</h3><p>${icons.globe}<span>${esc(s.origin)}</span></p></div>`).join('\n          ')}
+          ${f.staples.map((s) => `<div class="staple"><h3>${esc(s.name)}</h3><p>${icons.globe}<span>${esc(s.origin)}</span></p></div>`).join('\n          ')}
         </div>
-        <p class="note reveal">${esc(f.closing)}</p>
+        <p class="note">${esc(f.closing)}</p>
       </div>
     </section>
 
@@ -614,8 +614,8 @@ function pageContacts(t) {
 
     <section class="section">
       <div class="container contact-split">
-        <div class="reveal">${contactList(t)}</div>
-        <div class="reveal">${requestForm(t)}</div>
+        <div >${contactList(t)}</div>
+        <div >${requestForm(t)}</div>
       </div>
     </section>`;
   return layout(t, 'contacts', { title: c.title, description: c.description, body });
