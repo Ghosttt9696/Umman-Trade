@@ -12,7 +12,7 @@ export default {
   locale: 'tk_TM',
 
   tagline: 'Türkmenistanda önümçilik, eksport, import we paýlaýyş',
-  address: 'Türkmenistan, [şäheri we salgysyny görkeziň]',
+  address: 'Aşgabat, Türkmenistan',
 
   nav: {
     home: 'Baş sahypa',

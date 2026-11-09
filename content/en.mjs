@@ -11,7 +11,7 @@ export default {
   locale: 'en_US',
 
   tagline: 'Manufacturing, export, import and distribution in Turkmenistan',
-  address: 'Turkmenistan, [city and street address]',
+  address: 'Ashgabat, Turkmenistan',
 
   nav: {
     home: 'Home',
