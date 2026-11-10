@@ -42,7 +42,7 @@ export default {
     breadcrumbHome: 'Baş sahypa',
     directions: 'Ugurlar',
     company: 'Kompaniýa',
-    legal: 'Telekeçi Mamedow Begenç · A tapgyrly № 0057643 patent',
+    legal: 'Telekeçi Mammedow Begenç · A tapgyrly № 0057643 patent',
   },
 
   cta: {
@@ -123,8 +123,8 @@ export default {
 
   about: {
     title: 'Biz barada',
-    description: 'UMMAN TRADE — telekeçi Mamedow Begenjiň haryt nyşany: ýüplük önümçiligi, pagta eksporty, himiýa önümleriniň importy we Türkmenistanda azyk önümlerini paýlamak.',
-    lead: 'UMMAN TRADE — telekeçi Mamedow Begenjiň Türkmenistanda önümçilik we söwda ugurlaryny ösdürýän haryt nyşany.',
+    description: 'UMMAN TRADE — telekeçi Mammedow Begenjiň haryt nyşany: ýüplük önümçiligi, pagta eksporty, himiýa önümleriniň importy we Türkmenistanda azyk önümlerini paýlamak.',
+    lead: 'UMMAN TRADE — telekeçi Mammedow Begenjiň Türkmenistanda önümçilik we söwda ugurlaryny ösdürýän haryt nyşany.',
     paragraphs: [
       'Biziň işimiz pagta ýüplügini öndürmegi we satmagy, pagta önümleriniň eksportyny, himiýa önümleriniň importyny, şeýle hem azyk önümlerini we gündelik sarp ediş harytlaryny (FMCG) paýlamagy we lomaý söwdasyny öz içine alýar.',
       'Biz amaly tejribäni, halkara hyzmatdaşlyk gatnaşyklaryny we önümiň hiline üns berýäris.',
@@ -140,7 +140,7 @@ export default {
     requisitesTitle: 'Rekwizitler',
     requisites: [
       ['Haryt nyşany', 'UMMAN TRADE'],
-      ['Telekeçi', 'Mamedow Begenç'],
+      ['Telekeçi', 'Mammedow Begenç'],
       ['Işiň amala aşyrylmagynyň esasy', 'A tapgyrly № 0057643 patent'],
     ],
   },

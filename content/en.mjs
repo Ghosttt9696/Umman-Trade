@@ -41,7 +41,7 @@ export default {
     breadcrumbHome: 'Home',
     directions: 'Business lines',
     company: 'Company',
-    legal: 'Individual entrepreneur Mamedov Begench · patent series A No. 0057643',
+    legal: 'Individual entrepreneur Mammedov Begench · patent series A No. 0057643',
   },
 
   cta: {
@@ -122,8 +122,8 @@ export default {
 
   about: {
     title: 'About us',
-    description: 'UMMAN TRADE is the trade mark of entrepreneur Mamedov Begench: yarn manufacturing, cotton export, chemical imports and food distribution in Turkmenistan.',
-    lead: 'UMMAN TRADE is the trade mark under which entrepreneur Mamedov Begench develops manufacturing and trading businesses in Turkmenistan.',
+    description: 'UMMAN TRADE is the trade mark of entrepreneur Mammedov Begench: yarn manufacturing, cotton export, chemical imports and food distribution in Turkmenistan.',
+    lead: 'UMMAN TRADE is the trade mark under which entrepreneur Mammedov Begench develops manufacturing and trading businesses in Turkmenistan.',
     paragraphs: [
       'Our activities cover the manufacture and sale of cotton yarn, export of cotton products, import of chemical products, and distribution and wholesale of food and fast-moving consumer goods (FMCG).',
       'We combine hands-on experience, international partnerships and close attention to product quality.',
@@ -139,7 +139,7 @@ export default {
     requisitesTitle: 'Company details',
     requisites: [
       ['Trade mark', 'UMMAN TRADE'],
-      ['Entrepreneur', 'Mamedov Begench'],
+      ['Entrepreneur', 'Mammedov Begench'],
       ['Legal basis of activity', 'patent series A No. 0057643'],
     ],
   },
