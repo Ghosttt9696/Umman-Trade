@@ -101,7 +101,7 @@ export default {
     stats: [
       { value: '5 000 tonna', label: 'ýüplük boýunça önümçilik kuwwaty' },
       { value: '12 000 tonna', label: 'pagta linti 2024–2025 ýyllarda eksport edildi' },
-      { value: 'HVI', label: 'pagtanyň hilini barlaýan öz barhanamyz' },
+      { value: 'HVI', label: 'pagtanyň hilini barlaýan öz barlaghanamyz' },
       { value: '4', label: 'işiň ugry' },
     ],
     directionsTitle: 'Işimiziň ugurlary',
@@ -109,8 +109,8 @@ export default {
     whyTitle: 'Näme üçin biz bilen işleýärler',
     why: [
       { icon: 'factory', title: 'Öz önümçiligimiz', text: '2026-njy ýylda ulanylmaga berlen ALTYN PAMYK ýüplük kärhanasy.' },
-      { icon: 'lab', title: 'Hil barhanalary', text: 'Ýüplük önümçiliginde öz barhanamyz we pagta süýümini synagdan geçirmek üçin HVI ulgamly barhana.' },
-      { icon: 'scale', title: 'Uly lomaý', text: 'Uly lomaý getirip bermekde tejribe: 2024–2025 ýyllarda 12 000 tonna pagta linti.' },
+      { icon: 'lab', title: 'Hil barlaghanalary', text: 'Ýüplük önümçiliginde öz barlaghanamyz we pagta süýümini synagdan geçirmek üçin HVI ulgamly barlaghana.' },
+      { icon: 'scale', title: 'Lomaý', text: 'Lomaý getirip bermekde tejribe: 2024–2025 ýyllarda 12 000 tonna pagta linti.' },
       { icon: 'globe', title: 'Halkara gatnaşyklar', text: 'Daşary ýurt alyjylary, üpjün edijiler we öndürijiler bilen ýola goýlan gatnaşyklar.' },
       { icon: 'check', title: 'Ygtyýarnama', text: 'Nebit-himiýa önümlerini Türkmenistanda bar bolan ygtyýarnama esasynda getirýäris.' },
       { icon: 'handshake', title: 'Ygtybarlylyk', text: 'Işimiziň esasynda — borçnamalary jogapkärli ýerine ýetirmek we uzak möhletli hyzmatdaşlyk.' },
@@ -132,7 +132,7 @@ export default {
     ],
     valuesTitle: 'Ýörelgelerimiz',
     values: [
-      { title: 'Hil', text: 'Öz barhanalarymyz we önümiň hiline gözegçilik.' },
+      { title: 'Hil', text: 'Öz barlaghanalarymyz we önümiň hiline gözegçilik.' },
       { title: 'Jogapkärçilik', text: 'Möçber, hil we möhlet boýunça borçnamalary ýerine ýetirýäris.' },
       { title: 'Hyzmatdaşlyk', text: 'Müşderiler we üpjün edijiler bilen uzak möhletli gatnaşyklary gurýarys.' },
       { title: 'Ösüş', text: 'Önümçiligi we önüm görnüşlerini giňeldýäris.' },
@@ -170,13 +170,13 @@ export default {
     features: [
       'Döwrebap tehnologiýalar we enjamlar',
       'Önümçilik hytaý inženerleri bilen bilelikde ýola goýuldy',
-      'Hile gözegçilik edýän öz barhanamyz',
+      'Hile gözegçilik edýän öz barlaghanamyz',
       'Ýeke-täk satyjy — UMMAN TRADE',
     ],
     labTitle: 'Hil gözegçiligi',
-    labText: 'Öz barhanamyz öndürilýän önümiň hiline gözegçiligi üpjün edýär.',
-    testsTitle: 'Barhana synaglarynyň netijeleri',
-    testsNote: 'Kärhananyň barhanasynyň 30.10.2026 senesindäki beýannamalary: C21S (Ne 21) ýüplügi, pnewmomehaniki OE egriş, 100 % pagta. Aýry partiýalaryň görkezijileri tapawutlanyp biler.',
+    labText: 'Öz barlaghanamyz öndürilýän önümiň hiline gözegçiligi üpjün edýär.',
+    testsTitle: 'Barlaghana synaglarynyň netijeleri',
+    testsNote: 'Kärhananyň barlaghanasynyň 30.10.2026 senesindäki beýannamalary: C21S (Ne 21) ýüplügi, pnewmomehaniki OE egriş, 100 % pagta. Aýry partiýalaryň görkezijileri tapawutlanyp biler.',
     tests: [
       ['Çyzykly dykyzlyk', '27,8 teks (Ne 21)'],
       ['Üzülme güýji', '363,2 sN'],
@@ -195,7 +195,7 @@ export default {
 
   export: {
     title: 'Pagta önümleriniň eksporty',
-    description: 'Türkmenistandan pagta lintiniň (linteriň), pagta süýüminiň we ülüginiň eksporty. 2024–2025 ýyllarda 12 000 tonna lint. HVI barhanasy.',
+    description: 'Türkmenistandan pagta lintiniň (linteriň), pagta süýüminiň we ülüginiň eksporty. 2024–2025 ýyllarda 12 000 tonna lint. HVI barlaghanasy.',
     lead: '2024-nji ýyldan bäri toparymyz Türkmenistandan pagta önümlerini eksport edýär.',
     itemsTitle: 'Näme eksport edýäris',
     items: [
@@ -210,8 +210,8 @@ export default {
     paragraphs: [
       '2024–2025 ýyllarda 12 000 tonna pagta linti eksport edildi. Amaly tejribe we ýola goýlan söwda gatnaşyklary daşary ýurt alyjylary üçin uly lomaý getirip bermegi guramaga mümkinçilik berýär.',
     ],
-    labTitle: 'HVI barhanasy',
-    labText: 'HVI ulgamy bilen enjamlaşdyrylan öz barhanamyz pagta süýümini synagdan geçirmäge we onuň hil häsiýetnamalaryny kesgitlemäge mümkinçilik berýär.',
+    labTitle: 'HVI barlaghanasy',
+    labText: 'HVI ulgamy bilen enjamlaşdyrylan öz barlaghanamyz pagta süýümini synagdan geçirmäge we onuň hil häsiýetnamalaryny kesgitlemäge mümkinçilik berýär.',
     galleryTitle: 'Saklaýyş meýdançalary',
     gallery: ['Saklaýyş meýdançasy', 'Pagta tuplary', 'Ýüklemäge taýýar partiýalar', 'Pagta çig maly', 'Pagta süýümi', 'Pagta çig maly ýakyndan'],
     videoLabel: 'Wideo: pagta tuplaryny saklaýyş meýdançasy',
