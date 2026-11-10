@@ -132,7 +132,7 @@ export default {
     ],
     valuesTitle: 'Ýörelgelerimiz',
     values: [
-      { title: 'Hil', text: 'Öz barlaghanalarymyz we önümiň hiline gözegçilik.' },
+      { title: 'Hil', text: 'Öz barlaghanalarymyzyň üsti bilen önümiň hiline gözegçilik edýäris.' },
       { title: 'Jogapkärçilik', text: 'Möçber, hil we möhlet boýunça borçnamalary ýerine ýetirýäris.' },
       { title: 'Hyzmatdaşlyk', text: 'Müşderiler we üpjün edijiler bilen uzak möhletli gatnaşyklary gurýarys.' },
       { title: 'Ösüş', text: 'Önümçiligi we önüm görnüşlerini giňeldýäris.' },
