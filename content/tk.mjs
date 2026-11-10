@@ -99,8 +99,8 @@ export default {
     heroPrimary: 'Ýüz tutmak',
     heroSecondary: 'Ugurlar',
     stats: [
-      { value: '5 000 t', label: 'ýüplük boýunça önümçilik kuwwaty' },
-      { value: '12 000 t', label: 'pagta linti 2024–2025 ýyllarda eksport edildi' },
+      { value: '5 000 tonna', label: 'ýüplük boýunça önümçilik kuwwaty' },
+      { value: '12 000 tonna', label: 'pagta linti 2024–2025 ýyllarda eksport edildi' },
       { value: 'HVI', label: 'pagtanyň hilini barlaýan öz barhanamyz' },
       { value: '4', label: 'işiň ugry' },
     ],
@@ -156,7 +156,7 @@ export default {
     ],
     stats: [
       { value: '2026', label: 'ulanylmaga berlen ýyly' },
-      { value: '5 000 t', label: 'önümçilik kuwwaty' },
+      { value: '5 000 tonna', label: 'önümçilik kuwwaty' },
       { value: 'Ne 16 · 21', label: 'ýüplügiň belgileri' },
     ],
     specs: [
@@ -205,7 +205,7 @@ export default {
     ],
     stats: [
       { value: '2024', label: 'eksport işiniň başlanan ýyly' },
-      { value: '12 000 t', label: 'pagta linti 2024–2025 ýyllarda eksport edildi' },
+      { value: '12 000 tonna', label: 'pagta linti 2024–2025 ýyllarda eksport edildi' },
     ],
     paragraphs: [
       '2024–2025 ýyllarda 12 000 tonna pagta linti eksport edildi. Amaly tejribe we ýola goýlan söwda gatnaşyklary daşary ýurt alyjylary üçin uly lomaý getirip bermegi guramaga mümkinçilik berýär.',

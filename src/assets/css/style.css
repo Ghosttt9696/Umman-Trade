@@ -487,6 +487,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 24px 0; }
 .stat-row > div { padding: 16px 18px; border-radius: var(--radius-sm); background: var(--cream-2); border: 1px solid var(--line); }
 .stat-row dt { font-size: 1.35rem; font-weight: 800; color: var(--brand); line-height: 1.1; letter-spacing: -0.02em; }
+.stat-row dt { white-space: nowrap; }
+@media (max-width: 480px) { .stat-row > div { padding: 14px; } .stat-row dt { font-size: 1.12rem; } }
 .stat-row dd { margin: 4px 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.35; }
 .stats.stat-row { margin: 40px 0 0; }
 

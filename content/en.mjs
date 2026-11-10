@@ -98,8 +98,8 @@ export default {
     heroPrimary: 'Send a request',
     heroSecondary: 'Business lines',
     stats: [
-      { value: '5,000 t', label: 'yarn production capacity' },
-      { value: '12,000 t', label: 'of cotton linter exported in 2024–2025' },
+      { value: '5,000 tonnes', label: 'yarn production capacity' },
+      { value: '12,000 tonnes', label: 'of cotton linter exported in 2024–2025' },
       { value: 'HVI', label: 'in-house cotton testing laboratory' },
       { value: '4', label: 'business lines' },
     ],
@@ -155,7 +155,7 @@ export default {
     ],
     stats: [
       { value: '2026', label: 'commissioned' },
-      { value: '5,000 t', label: 'production capacity' },
+      { value: '5,000 tonnes', label: 'production capacity' },
       { value: 'Ne 16 · 21', label: 'yarn counts' },
     ],
     specs: [
@@ -204,7 +204,7 @@ export default {
     ],
     stats: [
       { value: '2024', label: 'export operations began' },
-      { value: '12,000 t', label: 'of cotton linter exported in 2024–2025' },
+      { value: '12,000 tonnes', label: 'of cotton linter exported in 2024–2025' },
     ],
     paragraphs: [
       'In 2024–2025 we exported 12,000 tonnes of cotton linter. Our hands-on experience and established trade relationships allow us to organise bulk shipments for international buyers.',
