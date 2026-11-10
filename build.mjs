@@ -40,7 +40,7 @@ const NAV = ['about', 'yarn', 'export', 'import', 'food', 'contacts'];
 
 // Card image for each business line: a photo if it exists, otherwise an illustration
 const DIRECTION_MEDIA = {
-  yarn: { photo: 'yarn-card', illu: 'yarn' },
+  yarn: { photo: 'yarn-card-white', illu: 'yarn' },
   export: { photo: 'export-2', illu: 'bale' },
   import: { photo: 'import-1', illu: 'chem' },
   food: { photo: 'food-1', illu: 'food' },
