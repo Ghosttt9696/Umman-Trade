@@ -105,7 +105,7 @@ export default {
       { value: '4', label: 'işiň ugry' },
     ],
     directionsTitle: 'Işimiziň ugurlary',
-    directionsText: 'Biz amaly tejribäni, halkara hyzmatdaşlyk gatnaşyklaryny we önümiň hiline üns bermegi birleşdirýäris.',
+    directionsText: 'Biz amaly tejribäni, halkara hyzmatdaşlyk gatnaşyklaryny we önümiň hiline üns berýäris.',
     whyTitle: 'Näme üçin biz bilen işleýärler',
     why: [
       { icon: 'factory', title: 'Öz önümçiligimiz', text: '2026-njy ýylda ulanylmaga berlen ALTYN PAMYK ýüplük kärhanasy.' },
@@ -127,7 +127,7 @@ export default {
     lead: 'UMMAN TRADE — telekeçi Mamedow Begenjiň Türkmenistanda önümçilik we söwda ugurlaryny ösdürýän haryt nyşany.',
     paragraphs: [
       'Biziň işimiz pagta ýüplügini öndürmegi we satmagy, pagta önümleriniň eksportyny, himiýa önümleriniň importyny, şeýle hem azyk önümlerini we gündelik sarp ediş harytlaryny (FMCG) paýlamagy we lomaý söwdasyny öz içine alýar.',
-      'Biz amaly tejribäni, halkara hyzmatdaşlyk gatnaşyklaryny we önümiň hiline üns bermegi birleşdirýäris.',
+      'Biz amaly tejribäni, halkara hyzmatdaşlyk gatnaşyklaryny we önümiň hiline üns berýäris.',
       'Işimiziň esasynda — borçnamalary jogapkärli ýerine ýetirmek we müşderiler hem üpjün edijiler bilen uzak möhletli hyzmatdaşlyk durýar.',
     ],
     valuesTitle: 'Ýörelgelerimiz',
