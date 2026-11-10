@@ -68,7 +68,12 @@ const A = (p) => `../assets/${p}?v=${assetVersion}`; // asset path from a langua
 /** Published path of src/assets/img/<name>.(webp|jpg|jpeg|png) if it exists. */
 function photo(name) {
   for (const ext of ['webp', 'jpg', 'jpeg', 'png']) {
-    if (existsSync(path.join(SRC_ASSETS, 'img', `${name}.${ext}`))) return `../assets/img/${name}.${ext}`;
+    const file = path.join(SRC_ASSETS, 'img', `${name}.${ext}`);
+    if (existsSync(file)) {
+      // ?v=<content hash> makes browsers fetch a replaced photo instead of a cached copy
+      const v = createHash('sha1').update(readFileSync(file)).digest('hex').slice(0, 8);
+      return `../assets/img/${name}.${ext}?v=${v}`;
+    }
   }
   return null;
 }
