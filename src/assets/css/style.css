@@ -485,11 +485,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* stats used inside content */
 .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 24px 0; }
-.stat-row > div { padding: 16px 18px; border-radius: var(--radius-sm); background: var(--cream-2); border: 1px solid var(--line); }
-.stat-row dt { font-size: 1.35rem; font-weight: 800; color: var(--brand); line-height: 1.1; letter-spacing: -0.02em; }
-.stat-row dt { white-space: nowrap; }
-@media (max-width: 480px) { .stat-row > div { padding: 14px; } .stat-row dt { font-size: 1.12rem; } }
-.stat-row dd { margin: 4px 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.35; }
+.stat-row > div {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center;
+  padding: 22px 16px; border-radius: var(--radius); background: var(--cream-2); border: 1px solid var(--line);
+}
+.stat-row dt { font-size: 1.6rem; font-weight: 800; color: var(--brand); line-height: 1.1; letter-spacing: -0.02em; white-space: nowrap; }
+.stat-row dt::after { content: ''; display: block; width: 28px; height: 2px; margin: 10px auto 0; border-radius: 2px; background: var(--accent); }
+.stat-row dd { margin: 10px 0 0; color: var(--muted); font-size: 0.88rem; line-height: 1.4; max-width: 24ch; }
+@media (max-width: 480px) { .stat-row > div { padding: 16px 12px; } .stat-row dt { font-size: 1.15rem; } }
 .stats.stat-row { margin: 40px 0 0; }
 
 
