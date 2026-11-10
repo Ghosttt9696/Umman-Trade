@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ummantrade.com/tk/</loc></url>
+  <url><loc>https://ummantrade.com/tk/about.html</loc></url>
+  <url><loc>https://ummantrade.com/tk/yarn.html</loc></url>
+  <url><loc>https://ummantrade.com/tk/export.html</loc></url>
+  <url><loc>https://ummantrade.com/tk/import.html</loc></url>
+  <url><loc>https://ummantrade.com/tk/food.html</loc></url>
+  <url><loc>https://ummantrade.com/tk/contacts.html</loc></url>
   <url><loc>https://ummantrade.com/ru/</loc></url>
   <url><loc>https://ummantrade.com/ru/about.html</loc></url>
   <url><loc>https://ummantrade.com/ru/yarn.html</loc></url>
@@ -14,11 +21,4 @@
   <url><loc>https://ummantrade.com/en/import.html</loc></url>
   <url><loc>https://ummantrade.com/en/food.html</loc></url>
   <url><loc>https://ummantrade.com/en/contacts.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/</loc></url>
-  <url><loc>https://ummantrade.com/tk/about.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/yarn.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/export.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/import.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/food.html</loc></url>
-  <url><loc>https://ummantrade.com/tk/contacts.html</loc></url>
 </urlset>

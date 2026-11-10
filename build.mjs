@@ -21,7 +21,8 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SRC_ASSETS = path.join(ROOT, 'src', 'assets');
 const OUT = path.join(ROOT, 'docs');
 
-const LANGS = [ru, en, tk];
+// Order of languages in the switcher and footer: Turkmen, Russian, English
+const LANGS = [tk, ru, en];
 const DEFAULT_LANG = 'ru';
 const DIRECTIONS = ['yarn', 'export', 'import', 'food'];
 
@@ -680,7 +681,7 @@ function shape(obj, prefix = '') {
 function checkLocales() {
   const ref = new Set(shape(ru));
   let ok = true;
-  for (const l of LANGS.slice(1)) {
+  for (const l of LANGS.filter((x) => x !== ru)) {
     const cur = new Set(shape(l));
     const missing = [...ref].filter((k) => !cur.has(k));
     const extra = [...cur].filter((k) => !ref.has(k));

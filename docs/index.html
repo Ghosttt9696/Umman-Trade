@@ -9,7 +9,7 @@
   <meta http-equiv="refresh" content="1; url=ru/index.html">
   <script>
     (function () {
-      var codes = ["ru","en","tk"], pick = 'ru';
+      var codes = ["tk","ru","en"], pick = 'ru';
       try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; else throw 0; }
       catch (e) {
         var nav = (navigator.languages || [navigator.language || '']).map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
@@ -21,6 +21,6 @@
   <style>body{font:16px system-ui,sans-serif;background:#fff;color:#16233a;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#1d4579;margin:0 .5em}</style>
 </head>
 <body>
-  <p><a href="ru/index.html" lang="ru">Русский</a><a href="en/index.html" lang="en">English</a><a href="tk/index.html" lang="tk">Türkmençe</a></p>
+  <p><a href="tk/index.html" lang="tk">Türkmençe</a><a href="ru/index.html" lang="ru">Русский</a><a href="en/index.html" lang="en">English</a></p>
 </body>
 </html>
