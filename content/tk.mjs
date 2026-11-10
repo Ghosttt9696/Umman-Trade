@@ -235,7 +235,7 @@ export default {
     description: 'Türkmenistanda azyk önümlerini, içgileri we FMCG harytlaryny paýlamak we lomaý söwda: Vedrenne, Giffard, Kimbo; şeker, tüwi, un.',
     lead: 'UMMAN TRADE haryt nyşany bilen azyk önümlerini, içgileri we gündelik sarp ediş harytlaryny paýlamagy we lomaý söwdasyny ösdürýäris.',
     brandsTitle: 'Brendlerimiz',
-    brandsText: 'Biziň portfelimiz fransuz Vedrenne we Giffard brendlerini, şeýle hem italýan Kimbo kofe brendini paýlamagy öz içine alýar.',
+    brandsText: 'Biziň portfelimiz fransuz Vedrenne we Giffard brendlerini, şeýle hem italýan Kimbo kofe brendini öz içine alýar.',
     brands: [
       { name: 'Vedrenne', origin: 'Fransiýa' },
       { name: 'Giffard', origin: 'Fransiýa' },
