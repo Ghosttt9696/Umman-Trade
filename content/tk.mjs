@@ -254,7 +254,7 @@ export default {
   contacts: {
     title: 'Habarlaşmak',
     description: 'UMMAN TRADE bilen habarlaşmak: telefon, WhatsApp, e-poçta. Ýüplük, pagta we himiýa önümleri, azyk önümleri üçin ýüz tutmalar.',
-    lead: 'Siz üçin amatly usulda biz bilen habarlaşyň ýa-da ýüz tutma galdyryň — soraglaryňyza jogap bereris we täjirçilik teklibini taýýarlarys.',
+    lead: 'Biz bilen habarlaşyň — ähli soraglaryňyza jogap bereris we täjirçilik teklibini taýýarlarys.',
   },
 
   notFound: {
