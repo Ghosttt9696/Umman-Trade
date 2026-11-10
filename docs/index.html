@@ -1,20 +1,17 @@
 <!doctype html>
-<html lang="ru">
+<html lang="tk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Umman Trading</title>
-  <meta name="description" content="UMMAN TRADE — производство хлопчатобумажной пряжи ALTYN PAMYK, экспорт хлопкового линта и волокна, импорт химической продукции, дистрибуция продуктов питания в Туркменистане.">
+  <meta name="description" content="UMMAN TRADE — ALTYN PAMYK pagta ýüplüginiň önümçiligi, pagta lintiniň we süýüminiň eksporty, himiýa önümleriniň importy, Türkmenistanda azyk önümlerini paýlamak.">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <meta http-equiv="refresh" content="1; url=ru/index.html">
+  <meta http-equiv="refresh" content="1; url=tk/index.html">
   <script>
     (function () {
-      var codes = ["tk","ru","en"], pick = 'ru';
-      try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; else throw 0; }
-      catch (e) {
-        var nav = (navigator.languages || [navigator.language || '']).map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
-        for (var i = 0; i < nav.length; i++) { if (codes.indexOf(nav[i]) > -1) { pick = nav[i]; break; } }
-      }
+      var codes = ["tk","ru","en"], pick = 'tk';
+      // Turkmen by default; a language the visitor picked earlier is remembered
+      try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; } catch (e) {}
       location.replace(pick + '/index.html');
     })();
   </script>

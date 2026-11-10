@@ -23,7 +23,7 @@ const OUT = path.join(ROOT, 'docs');
 
 // Order of languages in the switcher and footer: Turkmen, Russian, English
 const LANGS = [tk, ru, en];
-const DEFAULT_LANG = 'ru';
+const DEFAULT_LANG = 'tk'; // language a first-time visitor sees
 const DIRECTIONS = ['yarn', 'export', 'import', 'food'];
 
 // Pages: key -> output file name
@@ -616,17 +616,14 @@ function rootIndex() {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(site.name)}</title>
-  <meta name="description" content="${esc(ru.home.description)}">
+  <meta name="description" content="${esc(LANGS.find((l) => l.code === DEFAULT_LANG).home.description)}">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <meta http-equiv="refresh" content="1; url=${DEFAULT_LANG}/index.html">
   <script>
     (function () {
       var codes = ${codes}, pick = '${DEFAULT_LANG}';
-      try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; else throw 0; }
-      catch (e) {
-        var nav = (navigator.languages || [navigator.language || '']).map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
-        for (var i = 0; i < nav.length; i++) { if (codes.indexOf(nav[i]) > -1) { pick = nav[i]; break; } }
-      }
+      // Turkmen by default; a language the visitor picked earlier is remembered
+      try { var saved = localStorage.getItem('lang'); if (codes.indexOf(saved) > -1) pick = saved; } catch (e) {}
       location.replace(pick + '/index.html');
     })();
   </script>
