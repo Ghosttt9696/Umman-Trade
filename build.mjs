@@ -551,7 +551,7 @@ function pageImport(t) {
           ${m.items
             .map(
               (it) => `<article class="item-card">
-            <div class="item-card-media">${illustrations.chem}</div>
+            <div class="item-card-media${photo(`import-${it.key}`) ? ' has-photo' : ''}">${photo(`import-${it.key}`) ? `<img src="${photo(`import-${it.key}`)}" alt="${esc(it.name)}" loading="lazy">` : illustrations.chem}</div>
             <h3>${esc(it.name)}</h3>
             <p>${esc(it.text)}</p>
             <a class="link-arrow" href="${requestHref(it.key)}">${esc(t.ui.requestPrice)}${icons.arrow}</a>
