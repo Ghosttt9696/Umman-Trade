@@ -30,32 +30,6 @@ export const icons = {
 };
 
 // ---------------------------------------------------------------------
-// Logo mark: globe (navy) with a gold crescent — vector redraw of the
-// Umman Trading logo. The navy colour follows --logo-ink so the mark
-// stays visible on dark backgrounds.
-// To use the original file instead, put logo-mark.svg / .png / .webp
-// into src/assets/img/ and rebuild.
-// ---------------------------------------------------------------------
-export const logoMarkSvg = `<svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
-  <defs>
-    <linearGradient id="um-gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e6c983"/><stop offset=".5" stop-color="#c99a45"/><stop offset="1" stop-color="#a7792c"/>
-    </linearGradient>
-    <clipPath id="um-l"><path d="M0 0H25.5C29 17 25 33 11 48H0z"/></clipPath>
-    <clipPath id="um-r"><path d="M25.5 0H48V48H11C25 33 29 17 25.5 0z"/></clipPath>
-    <g id="um-net" fill="none" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
-      <circle cx="22" cy="24" r="17.8"/>
-      <path d="M4.2 24H39.8"/>
-      <path d="M22 6.2C13.5 12 13.5 36 22 41.8M22 6.2C30.5 12 30.5 36 22 41.8M7.6 14.5H36.4M7.6 33.5H36.4"/>
-    </g>
-  </defs>
-  <use href="#um-net" style="stroke:var(--logo-ink,#1d4579)" clip-path="url(#um-l)"/>
-  <use href="#um-net" stroke="url(#um-gold)" clip-path="url(#um-r)"/>
-  <path d="M26 3C37.8 4.6 46 13.6 46 24.4S37.6 44.4 25.4 45.4C35 40.6 40.6 33 40.6 24.2S35.4 7.6 26 3z" fill="url(#um-gold)"/>
-  <path d="M12 42.6C24.4 31.5 28.6 18 25.6 5.4" fill="none" style="stroke:var(--logo-ink,#1d4579)" stroke-width="2.6" stroke-linecap="round"/>
-</svg>`;
-
-// ---------------------------------------------------------------------
 // Product illustrations (decorative, 200×160)
 // ---------------------------------------------------------------------
 const yarnLines = Array.from({ length: 11 }, (_, i) => {
@@ -145,46 +119,3 @@ export const illustrations = {
     <g fill="var(--accent)"><ellipse cx="150" cy="146" rx="5" ry="3.5"/><ellipse cx="162" cy="144" rx="5" ry="3.5"/><ellipse cx="140" cy="148" rx="4.5" ry="3"/></g>
   </svg>`,
 };
-
-// Large hero illustration: cotton branch with bolls
-export const heroArt = `<svg class="hero-art" viewBox="0 0 520 520" aria-hidden="true">
-  <defs>
-    <radialGradient id="hg" cx="50%" cy="45%" r="55%">
-      <stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/>
-      <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <circle cx="260" cy="250" r="250" fill="url(#hg)"/>
-  <circle cx="260" cy="260" r="190" fill="none" stroke="var(--hero-line)" stroke-width="1.5" stroke-dasharray="3 9"/>
-  <circle cx="260" cy="260" r="236" fill="none" stroke="var(--hero-line)" stroke-width="1"/>
-  <g fill="none" stroke="var(--hero-stem)" stroke-width="7" stroke-linecap="round">
-    <path d="M250 500C252 400 246 330 262 250"/>
-    <path d="M256 380C220 360 180 330 150 280"/>
-    <path d="M254 330C300 310 340 280 370 230"/>
-  </g>
-  <g fill="var(--hero-leaf)">
-    <path d="M250 440c-40-6-80 6-100 30 36 10 76 0 100-30z"/>
-    <path d="M256 420c40-10 82-2 104 20-34 14-76 8-104-20z"/>
-  </g>
-  ${boll(262, 190, 1.25)}
-  ${boll(150, 262, 0.95)}
-  ${boll(374, 214, 0.9)}
-</svg>`;
-
-function boll(cx, cy, s) {
-  const r = (n) => (n * s).toFixed(1);
-  return `<g transform="translate(${cx} ${cy})">
-    <path d="M${r(-44)} ${r(30)}c${r(14)} ${r(26)} ${r(74)} ${r(26)} ${r(88)} 0l${r(-14)} ${r(10)}-${r(30)}-${r(8)}-${r(30)} ${r(8)}z" fill="var(--hero-leaf)"/>
-    <g fill="#fff">
-      <circle cx="0" cy="${r(-26)}" r="${r(32)}"/>
-      <circle cx="${r(-32)}" cy="${r(4)}" r="${r(30)}"/>
-      <circle cx="${r(32)}" cy="${r(4)}" r="${r(30)}"/>
-      <circle cx="0" cy="${r(16)}" r="${r(30)}"/>
-    </g>
-    <g fill="none" stroke="#d9d2c3" stroke-width="2" stroke-linecap="round">
-      <path d="M${r(-10)} ${r(-34)}q${r(8)} ${r(-8)} ${r(18)} ${r(-2)}"/>
-      <path d="M${r(-40)} ${r(2)}q${r(6)} ${r(-8)} ${r(16)} ${r(-4)}"/>
-      <path d="M${r(-10)} ${r(18)}q${r(10)} ${r(6)} ${r(20)} 0"/>
-    </g>
-  </g>`;
-}

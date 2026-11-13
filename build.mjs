@@ -15,7 +15,7 @@ import site from './content/site.mjs';
 import ru from './content/ru.mjs';
 import en from './content/en.mjs';
 import tk from './content/tk.mjs';
-import { icons, logoMarkSvg, illustrations } from './src/icons.mjs';
+import { icons, illustrations } from './src/icons.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SRC_ASSETS = path.join(ROOT, 'src', 'assets');
@@ -82,9 +82,10 @@ const hasVideo = (name) => existsSync(path.join(SRC_ASSETS, 'video', `${name}.mp
 const btn = (href, label, cls = 'btn-primary', icon = 'arrow') =>
   `<a class="btn ${cls}" href="${esc(href)}"><span>${esc(label)}</span>${icons[icon] || ''}</a>`;
 
-// Logo: original file from src/assets/img/logo-mark.* if present, otherwise the vector redraw
+// Logo: the company's own mark, src/assets/img/logo-mark.(svg|webp|png)
 const logoFile = ['svg', 'webp', 'png'].map((e) => `logo-mark.${e}`).find((f) => existsSync(path.join(SRC_ASSETS, 'img', f)));
-const logoMark = logoFile ? `<img class="logo-mark" src="../assets/img/${logoFile}" alt="" width="48" height="48">` : logoMarkSvg;
+if (!logoFile) throw new Error('Логотип не найден: положите файл src/assets/img/logo-mark.png');
+const logoMark = `<img class="logo-mark" src="../assets/img/${logoFile}" alt="" width="48" height="48">`;
 const [nameFirst, ...nameRest] = site.name.split(' ');
 const logoText = `<span class="logo-text"><span class="logo-l1">${esc(nameFirst)}</span>${nameRest.length ? `<span class="logo-l2">${esc(nameRest.join(' '))}</span>` : ''}</span>`;
 
