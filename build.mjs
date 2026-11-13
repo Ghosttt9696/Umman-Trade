@@ -378,7 +378,7 @@ function pageHome(t) {
 
     <section class="section">
       <div class="container split">
-        <div class="split-media">${media('yarn-mill', t.yarn.title, 'media-tall')}</div>
+        <div class="split-media"><figure class="media media-feature"><img src="${photo('yarn-feature')}" alt="${esc(t.yarn.title)}" loading="lazy"></figure></div>
         <div >
           <p class="eyebrow">${esc(h.yarnEyebrow)}</p>
           <h2>${esc(h.yarnTitle)}</h2>
