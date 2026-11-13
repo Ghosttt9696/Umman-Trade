@@ -95,7 +95,9 @@ const requestHref = (product) => `contacts.html${product ? `?product=${product}`
 function media(name, label, cls = '') {
   const poster = photo(`${name}-poster`);
   if (hasVideo(name)) {
-    return `<figure class="media ${cls}"><video class="media-video" autoplay muted loop playsinline preload="metadata"${poster ? ` poster="${poster}"` : ''} aria-label="${esc(label)}"><source src="../assets/video/${name}.mp4" type="video/mp4"></video></figure>`;
+    // ?v=<content hash> so a replaced video is not served from the browser cache
+    const v = createHash('sha1').update(readFileSync(path.join(SRC_ASSETS, 'video', `${name}.mp4`))).digest('hex').slice(0, 8);
+    return `<figure class="media ${cls}"><video class="media-video" autoplay muted loop playsinline preload="metadata"${poster ? ` poster="${poster}"` : ''} aria-label="${esc(label)}"><source src="../assets/video/${name}.mp4?v=${v}" type="video/mp4"></video></figure>`;
   }
   return poster ? `<figure class="media ${cls}"><img src="${poster}" alt="${esc(label)}" loading="lazy"></figure>` : '';
 }
