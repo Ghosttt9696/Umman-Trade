@@ -483,7 +483,7 @@ img.logo-mark { object-fit: contain; }
 .media video, .media img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .media-hero { aspect-ratio: 4 / 3; }
 .media-tall { aspect-ratio: 3 / 4; max-width: 520px; }
-.media-feature { aspect-ratio: 900 / 946; max-width: 520px; }
+.media-feature { aspect-ratio: 900 / 842; max-width: 520px; }
 .media-feature img { object-fit: cover; }
 @media (max-width: 900px) {
   .media-tall { aspect-ratio: 4 / 3; max-width: none; }
