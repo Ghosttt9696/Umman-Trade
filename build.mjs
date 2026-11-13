@@ -150,7 +150,7 @@ function layout(t, pageKey, { title, description, body }) {
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">` : ''}
   ${alternates}
-  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
   <link rel="preload" href="../assets/fonts/manrope-${t.code === 'ru' ? 'cyrillic' : t.code === 'tk' ? 'latin-ext' : 'latin'}-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${A('css/style.css')}">
 </head>
@@ -622,7 +622,7 @@ function rootIndex() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(site.name)}</title>
   <meta name="description" content="${esc(LANGS.find((l) => l.code === DEFAULT_LANG).home.description)}">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <meta http-equiv="refresh" content="1; url=${DEFAULT_LANG}/index.html">
   <script>
     (function () {
