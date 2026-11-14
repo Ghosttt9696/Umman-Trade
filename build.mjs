@@ -521,7 +521,7 @@ function pageExport(t) {
           ${x.items
             .map(
               (it) => `<article class="item-card">
-            <div class="item-card-media">${illustrations[it.illu]}</div>
+            <div class="item-card-media${photo(`export-item-${it.key}`) ? ' has-photo' : ''}">${photo(`export-item-${it.key}`) ? `<img src="${photo(`export-item-${it.key}`)}" alt="${esc(it.name)}" loading="lazy">` : illustrations[it.illu]}</div>
             <h3>${esc(it.name)}</h3>
             <p>${esc(it.text)}</p>
             <a class="link-arrow" href="${requestHref(it.key)}">${esc(t.ui.requestPrice)}${icons.arrow}</a>
