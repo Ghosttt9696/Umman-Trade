@@ -211,9 +211,7 @@ export default {
     ],
     labTitle: 'HVI laboratory',
     labText: 'Our own laboratory, equipped with an HVI system, tests cotton fibre and determines its quality characteristics.',
-    galleryTitle: 'Storage yards',
-    gallery: ['Storage yard', 'Cotton bales', 'Lots ready for shipping', 'Raw cotton', 'Cotton fibre', 'Raw cotton close-up'],
-    videoLabel: 'Video: cotton bale storage yard',
+    videoLabel: 'Video: cotton bales',
   },
 
   import: {

@@ -532,13 +532,6 @@ function pageExport(t) {
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <header class="section-head"><h2>${esc(x.galleryTitle)}</h2></header>
-        ${gallery(t, 'export', x.gallery)}
-      </div>
-    </section>
-
 ${ctaBand(t, 'lint')}`;
   return layout(t, 'export', { title: x.title, description: x.description, body });
 }
