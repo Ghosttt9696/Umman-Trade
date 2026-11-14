@@ -211,7 +211,7 @@ export default {
     ],
     labTitle: 'HVI laboratory',
     labText: 'Our own laboratory, equipped with an HVI system, tests cotton fibre and determines its quality characteristics.',
-    videoLabel: 'Video: cotton bales',
+    photoLabel: 'Cotton linter',
   },
 
   import: {

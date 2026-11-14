@@ -212,7 +212,7 @@ export default {
     ],
     labTitle: 'HVI barlaghanasy',
     labText: 'HVI ulgamy bilen enjamlaşdyrylan öz barlaghanamyz pagta süýümini synagdan geçirmäge we onuň hil häsiýetnamalaryny kesgitlemäge mümkinçilik berýär.',
-    videoLabel: 'Wideo: pagta tuplary',
+    photoLabel: 'Pagta linti',
   },
 
   import: {

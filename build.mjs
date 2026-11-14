@@ -501,7 +501,7 @@ function pageExport(t) {
 
     <section class="section">
       <div class="container split split-top">
-        <div class="split-media">${media('cotton-bales', x.videoLabel, 'media-tall')}</div>
+        <div class="split-media"><figure class="media media-tall"><img src="${photo('export-lint')}" alt="${esc(x.photoLabel)}" loading="lazy"></figure></div>
         <div >
           ${stats(x.stats)}
           <div class="prose">${x.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
