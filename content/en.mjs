@@ -198,9 +198,9 @@ export default {
     lead: 'Since 2024 our team has been exporting cotton products from Turkmenistan.',
     itemsTitle: 'What we export',
     items: [
-      { key: 'lint', illu: 'bale', name: 'Cotton linter', text: 'Short fibres from cotton seeds — raw material for the cellulose, cotton wool and chemical industries.' },
       { key: 'fiber', illu: 'boll', name: 'Cotton fibre', text: 'The main raw material for spinning mills and the textile industry.' },
       { key: 'ulyuk', illu: 'boll', name: 'Cotton ulyuk', text: 'Lower-grade raw cotton from partially opened bolls.' },
+      { key: 'lint', illu: 'bale', name: 'Cotton linter', text: 'Short fibres from cotton seeds — raw material for the cellulose, cotton wool and chemical industries.' },
     ],
     stats: [
       { value: '2024', label: 'export operations began' },

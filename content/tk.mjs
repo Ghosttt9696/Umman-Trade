@@ -199,9 +199,9 @@ export default {
     lead: '2024-nji ýyldan bäri toparymyz Türkmenistandan pagta önümlerini eksport edýär.',
     itemsTitle: 'Näme eksport edýäris',
     items: [
-      { key: 'lint', illu: 'bale', name: 'Pagta linti (linter)', text: 'Pagta çigidindäki gysga süýümler — sellýuloza, pamyk we himiýa senagaty üçin çig mal.' },
       { key: 'fiber', illu: 'boll', name: 'Pagta süýümi', text: 'Egriş we dokma kärhanalary üçin esasy çig mal.' },
       { key: 'ulyuk', illu: 'boll', name: 'Pagta ülügi', text: 'Doly açylmadyk künjeklerden alnan pes sortly pagta çig maly.' },
+      { key: 'lint', illu: 'bale', name: 'Pagta linti (linter)', text: 'Pagta çigidindäki gysga süýümler — sellýuloza, pamyk we himiýa senagaty üçin çig mal.' },
     ],
     stats: [
       { value: '2024', label: 'eksport işiniň başlanan ýyly' },
