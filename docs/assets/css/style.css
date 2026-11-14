@@ -481,4 +481,6 @@ img.logo-mark { object-fit: contain; }
 /* photos: portrait galleries */
 .gallery { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .photo img, .photo-ph { aspect-ratio: 3 / 4; }
+.photo-wide { grid-column: 1 / -1; }
+.photo-wide img { aspect-ratio: 16 / 9; }
 .photo-ph .icon { width: 40px; height: 40px; color: var(--line-strong); }

@@ -77,6 +77,21 @@ function photo(name) {
   }
   return null;
 }
+/** True when a gallery photo (JPEG) is wider than tall — it is then shown as a full-width banner. */
+function isLandscape(src) {
+  const file = path.join(SRC_ASSETS, 'img', src.replace('../assets/img/', '').split('?')[0]);
+  if (!/\.jpe?g$/i.test(file)) return false;
+  const b = readFileSync(file);
+  for (let i = 2; i + 9 < b.length; ) {
+    if (b[i] !== 0xff) { i++; continue; }
+    const m = b[i + 1];
+    if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) {
+      return b.readUInt16BE(i + 7) > b.readUInt16BE(i + 5); // width > height
+    }
+    i += 2 + b.readUInt16BE(i + 2);
+  }
+  return false;
+}
 const hasVideo = (name) => existsSync(path.join(SRC_ASSETS, 'video', `${name}.mp4`));
 
 const btn = (href, label, cls = 'btn-primary', icon = 'arrow') =>
@@ -283,11 +298,16 @@ function ctaBand(t, product) {
 }
 
 function gallery(t, prefix, captions) {
+  const items = captions.map((cap, i) => {
+    const src = photo(`${prefix}-${i + 1}`);
+    return { cap, src, wide: !!src && isLandscape(src) };
+  });
+  // landscape photos go first, as a full-width banner, so portrait cards keep a tidy grid
+  items.sort((a, b) => b.wide - a.wide);
   return `<div class="gallery">
-        ${captions
-          .map((cap, i) => {
-            const src = photo(`${prefix}-${i + 1}`);
-            return `<figure class="photo${src ? '' : ' photo-empty'}">
+        ${items
+          .map(({ cap, src, wide }) => {
+            return `<figure class="photo${src ? '' : ' photo-empty'}${wide ? ' photo-wide' : ''}">
           ${src ? `<img src="${src}" alt="${esc(cap)}" loading="lazy">` : `<div class="photo-ph">${icons.box}<span>${esc(t.ui.photoPlaceholder)}</span></div>`}
           <figcaption>${esc(cap)}</figcaption>
         </figure>`;
