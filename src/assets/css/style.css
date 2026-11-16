@@ -447,9 +447,11 @@ img.logo-mark { object-fit: contain; }
 .dir-card-body p { color: var(--muted); flex: 1; font-size: 0.97rem; }
 
 /* product items (export / import) */
-.item-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.item-grid-2 { grid-template-columns: repeat(2, 1fr); }
-@media (max-width: 860px) { .item-grid { grid-template-columns: 1fr; } .item-grid-2 { grid-template-columns: 1fr; } }
+/* flex so an incomplete last row sits in the centre */
+.item-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.item-grid > * { flex: 0 0 calc((100% - 40px) / 3); min-width: 0; }
+.item-grid-2 > * { flex-basis: calc((100% - 20px) / 2); }
+@media (max-width: 860px) { .item-grid > *, .item-grid-2 > * { flex-basis: 100%; } }
 .item-card { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: column; }
 .item-card-media { display: grid; place-items: center; aspect-ratio: 16 / 9; border-radius: var(--radius-sm); background: var(--cream-2); margin-bottom: 20px; }
 .item-card-media .illu { width: 46%; }
