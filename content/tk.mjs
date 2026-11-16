@@ -110,7 +110,7 @@ export default {
     why: [
       { icon: 'factory', title: 'Öz önümçiligimiz', text: '2026-njy ýylda ulanylmaga berlen ALTYN PAMYK ýüplük kärhanasy.' },
       { icon: 'lab', title: 'Hil barlaghanalary', text: 'Ýüplük önümçiliginde öz barlaghanamyz we pagta süýümini synagdan geçirmek üçin HVI ulgamly barlaghana.' },
-      { icon: 'scale', title: 'Lomaý', text: 'Lomaý getirip bermekde tejribe: 2024–2025 ýyllarda 12 000 tonna pagta linti.' },
+      { icon: 'scale', title: 'Lomaý üpjünçilik', text: 'Lomaý getirip bermekde tejribe: 2024–2025 ýyllarda 12 000 tonna pagta linti.' },
       { icon: 'globe', title: 'Halkara gatnaşyklar', text: 'Daşary ýurt alyjylary, üpjün edijiler we öndürijiler bilen ýola goýlan gatnaşyklar.' },
       { icon: 'check', title: 'Ygtyýarnama', text: 'Nebit-himiýa önümlerini Türkmenistanda bar bolan ygtyýarnama esasynda getirýäris.' },
       { icon: 'handshake', title: 'Ygtybarlylyk', text: 'Işimiziň esasynda — borçnamalary jogapkärli ýerine ýetirmek we uzak möhletli hyzmatdaşlyk.' },

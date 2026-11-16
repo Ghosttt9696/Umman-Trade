@@ -109,7 +109,7 @@ export default {
     why: [
       { icon: 'factory', title: 'Own manufacturing', text: 'The ALTYN PAMYK yarn mill, commissioned in 2026.' },
       { icon: 'lab', title: 'Quality laboratories', text: 'An in-house lab at the yarn mill and an HVI-equipped lab for cotton fibre testing.' },
-      { icon: 'scale', title: 'Bulk volumes', text: 'Proven bulk supply: 12,000 tonnes of cotton linter in 2024–2025.' },
+      { icon: 'scale', title: 'Wholesale supply', text: 'Proven bulk supply: 12,000 tonnes of cotton linter in 2024–2025.' },
       { icon: 'globe', title: 'International network', text: 'Established relationships with buyers, suppliers and manufacturers abroad.' },
       { icon: 'check', title: 'Licensed', text: 'Petrochemical products are supplied in Turkmenistan under our licence.' },
       { icon: 'handshake', title: 'Reliability', text: 'Our work is built on meeting commitments and long-term cooperation.' },
