@@ -111,7 +111,7 @@ export default {
     why: [
       { icon: 'factory', title: 'Own manufacturing', text: 'The ALTYN PAMYK yarn mill, commissioned in 2026.' },
       { icon: 'lab', title: 'Quality laboratories', text: 'An in-house lab at the yarn mill and an HVI-equipped lab for cotton fibre testing.' },
-      { icon: 'scale', title: 'Wholesale supply', text: 'Proven bulk supply: 12,000 tonnes of cotton linter in 2024–2025.' },
+      { icon: 'boxes', title: 'Wholesale supply', text: 'Proven bulk supply: 12,000 tonnes of cotton linter in 2024–2025.' },
       { icon: 'globe', title: 'International network', text: 'Established relationships with buyers, suppliers and manufacturers abroad.' },
       { icon: 'check', title: 'Licensed', text: 'Petrochemical products are supplied in Turkmenistan under our licence.' },
       { icon: 'handshake', title: 'Reliability', text: 'Our work is built on meeting commitments and long-term cooperation.' },
@@ -196,7 +196,7 @@ export default {
 
   export: {
     title: 'Cotton export',
-    description: 'Export of cotton linter, cotton fibre and ulyuk from Turkmenistan. 12,000 tonnes of linter in 2024–2025. HVI laboratory.',
+    description: 'Export of cotton fibre, ulyuk, linter, licker-in waste and card flat strips from Turkmenistan. 12,000 tonnes of linter in 2024–2025. HVI laboratory.',
     lead: 'Since 2024 our team has been exporting cotton products from Turkmenistan.',
     itemsTitle: 'What we export',
     items: [
