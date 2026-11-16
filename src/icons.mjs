@@ -6,7 +6,7 @@ const wrap = (body) =>
 export const icons = {
   factory: wrap('<path d="M3 21V10l5 3V10l5 3V7l8 4v10z"/><path d="M3 21h18"/><path d="M7 17h2M12 17h2M17 17h1"/>'),
   check: wrap('<path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/>'),
-  scale: wrap('<path d="M12 4v16M6 20h12"/><path d="M4 8h16"/><path d="M6 8l-3 6a3 3 0 0 0 6 0zM18 8l-3 6a3 3 0 0 0 6 0z"/>'),
+  scale: wrap('<rect x="3" y="12" width="8" height="8" rx="1"/><rect x="13" y="12" width="8" height="8" rx="1"/><rect x="8" y="4" width="8" height="8" rx="1"/><path d="M7 12v3M17 12v3M12 4v3"/>'), // stacked boxes = bulk supply
   truck: wrap('<path d="M2 6h11v10H2zM13 10h4l4 3v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>'),
   settings: wrap('<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/>'),
   handshake: wrap('<path d="M2 11l4-4 4 2 3-2 3 1 6 4"/><path d="M6 7v7l5 5 2-2 2 2 2-2 2-2-4-5"/><path d="M10 9l-3 3 2 2 3-3"/>'),
