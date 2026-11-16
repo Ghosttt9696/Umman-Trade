@@ -64,6 +64,8 @@ export default {
       lint: 'Pagta linti (linter)',
       fiber: 'Pagta süýümi',
       ulyuk: 'Pagta ülügi',
+      licker: 'Daraýjy maşynyň galyndysy (standart № 7)',
+      flat: 'Kard galyndysy (standart № 11)',
       caustic: 'Kaustik soda',
       ufc: 'Karbamid-formaldegid konsentraty (KFK)',
       food: 'Azyk önümleri / FMCG',
@@ -202,6 +204,8 @@ export default {
       { key: 'fiber', illu: 'boll', name: 'Pagta süýümi', text: 'Egriş we dokma kärhanalary üçin esasy çig mal.' },
       { key: 'ulyuk', illu: 'boll', name: 'Pagta ülügi', text: 'Doly açylmadyk künjeklerden alnan pes sortly pagta çig maly.' },
       { key: 'lint', illu: 'bale', name: 'Pagta linti (linter)', text: 'Pagta çigidindäki gysga süýümler — sellýuloza, pamyk we himiýa senagaty üçin çig mal.' },
+      { key: 'licker', illu: 'bale', name: 'Daraýjy maşynyň galyndysy', text: 'Standart № 7 (Licker-in Waste). Daraýjy maşynyň kabul ediji barabanynyň aşagyndan çykýan galyndylar: garyndyly gysga süýüm. Pamyk, dokalmadyk materiallar we süýümi gaýtadan işlemek üçin çig mal.' },
+      { key: 'flat', illu: 'bale', name: 'Kard galyndysy', text: 'Standart № 11 (Card Flat Strips). Daraýjy maşynyň şlýapkalaryndan aýrylýan süýümli galyndylar. Galyndy ýüplügi, pamyk we dokalmadyk materiallar üçin çig mal.' },
     ],
     stats: [
       { value: '2024', label: 'eksport işiniň başlanan ýyly' },

@@ -63,6 +63,8 @@ export default {
       lint: 'Cotton linter',
       fiber: 'Cotton fibre',
       ulyuk: 'Cotton ulyuk',
+      licker: 'Licker-in Waste (standard No. 7)',
+      flat: 'Card Flat Strips (standard No. 11)',
       caustic: 'Caustic soda',
       ufc: 'Urea-formaldehyde concentrate (UFC)',
       food: 'Food products / FMCG',
@@ -201,6 +203,8 @@ export default {
       { key: 'fiber', illu: 'boll', name: 'Cotton fibre', text: 'The main raw material for spinning mills and the textile industry.' },
       { key: 'ulyuk', illu: 'boll', name: 'Cotton ulyuk', text: 'Lower-grade raw cotton from partially opened bolls.' },
       { key: 'lint', illu: 'bale', name: 'Cotton linter', text: 'Short fibres from cotton seeds — raw material for the cellulose, cotton wool and chemical industries.' },
+      { key: 'licker', illu: 'bale', name: 'Licker-in Waste', text: 'Standard No. 7. Waste from under the licker-in of the carding machine: short fibre with trash. Raw material for cotton wool, nonwovens and fibre recycling.' },
+      { key: 'flat', illu: 'bale', name: 'Card Flat Strips', text: 'Standard No. 11. Fibrous waste stripped from the flats of the carding machine. Raw material for waste-spun yarn, cotton wool and nonwovens.' },
     ],
     stats: [
       { value: '2024', label: 'export operations began' },
