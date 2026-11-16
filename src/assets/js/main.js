@@ -1,4 +1,4 @@
-/* Umman Trading — site scripts (no dependencies) */
+/* UMMAN TRADE — site scripts (no dependencies) */
 (function () {
   'use strict';
   var doc = document.documentElement;
