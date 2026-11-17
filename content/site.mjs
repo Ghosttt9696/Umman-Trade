@@ -38,4 +38,11 @@ export default {
   // Яндекс Вебмастер:     https://webmaster.yandex.ru
   googleVerification: '',
   yandexVerification: 'b4f9ee61ecb90cb7',
+
+  // Статистика посещений. Номер счётчика Яндекс Метрики (только цифры, например '98765432')
+  // и идентификатор Google Analytics 4 (вида 'G-XXXXXXXXXX'). Пусто — счётчик не подключается.
+  // Цели, которые сайт отправляет сам: lead (заявка отправлена), whatsapp_lead (заявка в WhatsApp),
+  // phone_click (нажали на телефон), whatsapp_click (перешли в WhatsApp), email_click (нажали на почту).
+  yandexMetrikaId: '',
+  googleAnalyticsId: '',
 };

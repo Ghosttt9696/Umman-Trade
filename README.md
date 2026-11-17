@@ -83,6 +83,7 @@ docs/        ← ГОТОВЫЙ САЙТ (создаётся автоматич�
 - Описание для поиска — поле `description` (лучше до 160 символов).
 - Подтверждение сайта в Google Search Console и Яндекс Вебмастере — поля `googleVerification` и `yandexVerification` в `content/site.mjs`.
 - Файлы подтверждения (например, `google….html` от Google Search Console) кладите в `src/root/` — они копируются в корень сайта как есть.
+- Статистика посещений: номер Яндекс Метрики (`yandexMetrikaId`) и/или Google Analytics 4 (`googleAnalyticsId`) в `content/site.mjs`. Сайт сам отправляет цели: `lead` (заявка отправлена), `whatsapp_lead`, `phone_click`, `whatsapp_click`, `email_click`.
 
 ## Публикация
 

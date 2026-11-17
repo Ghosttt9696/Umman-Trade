@@ -1,4 +1,20 @@
 /* UMMAN TRADE — site scripts (no dependencies) */
+
+/* Goals for visitor statistics (Yandex Metrika / Google Analytics), if they are connected */
+function trackGoal(name) {
+  try {
+    if (window.ym && window.__ym) window.ym(window.__ym, 'reachGoal', name);
+    if (window.gtag) window.gtag('event', name === 'lead' || name === 'whatsapp_lead' ? 'generate_lead' : name, { method: name });
+  } catch (e) { /* statistics are optional */ }
+}
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  var h = a.getAttribute('href');
+  if (h.indexOf('tel:') === 0) trackGoal('phone_click');
+  else if (h.indexOf('https://wa.me/') === 0) trackGoal('whatsapp_click');
+  else if (h.indexOf('mailto:') === 0) trackGoal('email_click');
+});
 (function () {
   'use strict';
   var doc = document.documentElement;
@@ -84,6 +100,7 @@
 
     if (via === 'whatsapp' && form.getAttribute('data-whatsapp')) {
       window.open('https://wa.me/' + form.getAttribute('data-whatsapp') + '?text=' + encodeURIComponent(subject + '\n\n' + text), '_blank', 'noopener');
+      trackGoal('whatsapp_lead');
       return;
     }
 
@@ -122,6 +139,7 @@
       .then(function (res) {
         if (!res.ok || String(res.data.success) !== 'true') throw new Error(res.data.message || 'send failed');
         form.reset();
+        trackGoal('lead');
         okBox.textContent = form.getAttribute('data-success');
         okBox.hidden = false;
       })

@@ -169,6 +169,31 @@ function jsonLd(t, pageKey, title, url) {
   return `<script type="application/ld+json">${json}</script>`;
 }
 
+/** Visitor statistics: Yandex Metrika and/or Google Analytics 4, only when an id is set in site.mjs. */
+function analytics() {
+  let out = '';
+  const ym = String(site.yandexMetrikaId || '').replace(/\D/g, '');
+  if (ym) {
+    out += `  <script>
+    window.__ym = ${ym};
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(${ym}, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/${ym}" style="position:absolute;left:-9999px" alt=""></div></noscript>
+`;
+  }
+  const ga = String(site.googleAnalyticsId || '').trim();
+  if (/^G-[A-Z0-9]+$/i.test(ga)) {
+    out += `  <script async src="https://www.googletagmanager.com/gtag/js?id=${ga}"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${ga}');</script>
+`;
+  }
+  return out;
+}
+
 function layout(t, pageKey, { title, description, body }) {
   const file = PAGES[pageKey];
   const fullTitle = t[pageKey]?.metaTitle || (pageKey === 'home' ? `${site.name} — ${title}` : `${title} — ${site.name}`);
@@ -217,7 +242,7 @@ function layout(t, pageKey, { title, description, body }) {
   <link rel="icon" href="../assets/img/favicon.png" type="image/png">
   <link rel="preload" href="../assets/fonts/manrope-${t.code === 'ru' ? 'cyrillic' : t.code === 'tk' ? 'latin-ext' : 'latin'}-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${A('css/style.css')}">
-</head>
+${analytics()}</head>
 <body data-page="${pageKey}">
   <a class="skip" href="#main">${esc(t.ui.skip)}</a>
 
