@@ -135,15 +135,25 @@ document.addEventListener('click', function (e) {
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(payload),
     })
-      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, data: d }; }); })
+      .then(function (r) {
+        return r.text().then(function (raw) {
+          var d = {}; try { d = JSON.parse(raw); } catch (e) { /* not JSON */ }
+          return { ok: r.ok, status: r.status, data: d, raw: raw };
+        });
+      })
       .then(function (res) {
-        if (!res.ok || String(res.data.success) !== 'true') throw new Error(res.data.message || 'send failed');
+        if (!res.ok || String(res.data.success) !== 'true') {
+          // details for troubleshooting (browser console, F12)
+          if (window.console) console.error('[form] send failed', res.status, res.data.message || String(res.raw).slice(0, 300));
+          throw new Error(res.data.message || 'send failed (' + res.status + ')');
+        }
         form.reset();
         trackGoal('lead');
         okBox.textContent = form.getAttribute('data-success');
         okBox.hidden = false;
       })
       .catch(function (err) {
+        if (window.console) console.error('[form]', err && err.message);
         var needsActivation = /activat/i.test(String(err && err.message));
         errorBox.textContent = form.getAttribute(needsActivation ? 'data-not-activated' : 'data-failed');
         errorBox.hidden = false;
