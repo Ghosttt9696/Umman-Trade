@@ -775,6 +775,9 @@ async function main() {
   checkLocales();
   await fs.rm(OUT, { recursive: true, force: true });
   await fs.cp(SRC_ASSETS, path.join(OUT, 'assets'), { recursive: true });
+  // files that must sit at the site root as they are (e.g. search engine verification files)
+  const ROOT_FILES = path.join(SRC_ASSETS, '..', 'root');
+  if (existsSync(ROOT_FILES)) await fs.cp(ROOT_FILES, OUT, { recursive: true });
 
   const renderers = {
     home: pageHome,
