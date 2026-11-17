@@ -239,7 +239,11 @@ function layout(t, pageKey, { title, description, body }) {
   ${[site.googleVerification && `<meta name="google-site-verification" content="${esc(site.googleVerification)}">`,
      site.yandexVerification && `<meta name="yandex-verification" content="${esc(site.yandexVerification)}">`, alternates].filter(Boolean).join('\n  ')}
   ${jsonLd(t, pageKey, title, url)}
-  <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" href="../assets/img/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="../assets/img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
   <link rel="preload" href="../assets/fonts/manrope-${t.code === 'ru' ? 'cyrillic' : t.code === 'tk' ? 'latin-ext' : 'latin'}-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${A('css/style.css')}">
 ${analytics()}</head>
@@ -704,9 +708,15 @@ function rootIndex() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${esc(site.name)}</title>
   <meta name="description" content="${esc(LANGS.find((l) => l.code === DEFAULT_LANG).home.description)}">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/img/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   ${site.yandexVerification ? `<meta name="yandex-verification" content="${esc(site.yandexVerification)}">` : ''}
   ${site.googleVerification ? `<meta name="google-site-verification" content="${esc(site.googleVerification)}">` : ''}
+  <meta property="og:site_name" content="${esc(site.name)}">
+  ${site.baseUrl ? `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, alternateName: ['Umman Trade', 'ummantrade.com'], url: `${site.baseUrl}/` })}</script>` : ''}
   <meta http-equiv="refresh" content="0; url=${DEFAULT_LANG}/index.html">
   ${site.baseUrl ? LANGS.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${site.baseUrl}/${l.code}/">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${site.baseUrl}/">` : ''}
   <script>
