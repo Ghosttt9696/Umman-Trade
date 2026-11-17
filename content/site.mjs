@@ -32,4 +32,10 @@ export default {
   // Год основания — показывается в подвале и разделе «О компании».
   // Оставьте '' если не хотите показывать.
   founded: '',
+
+  // Подтверждение прав на сайт в поисковиках (код из мета-тега, только значение content="...").
+  // Google Search Console: https://search.google.com/search-console
+  // Яндекс Вебмастер:     https://webmaster.yandex.ru
+  googleVerification: '',
+  yandexVerification: '',
 };

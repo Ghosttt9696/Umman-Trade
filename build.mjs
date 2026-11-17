@@ -77,6 +77,27 @@ function photo(name) {
   }
   return null;
 }
+/** [width, height] of a JPEG or PNG file, or null. Used to give every <img> its size (no layout shift). */
+function imageSize(file) {
+  try {
+    const b = readFileSync(file);
+    if (b[0] === 0x89 && b[1] === 0x50) return [b.readUInt32BE(16), b.readUInt32BE(20)];
+    for (let i = 2; i + 9 < b.length; ) {
+      if (b[i] !== 0xff) { i++; continue; }
+      const m = b[i + 1];
+      if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+      i += 2 + b.readUInt16BE(i + 2);
+    }
+  } catch (e) { /* missing or unreadable */ }
+  return null;
+}
+/** Adds width/height to local <img> tags that have none. */
+const sizeImages = (html) =>
+  html.replace(/<img src="\.\.\/assets\/img\/([^"?]+)(\?[^"]*)?"(?![^>]*\swidth=)/g, (tag, name) => {
+    const wh = imageSize(path.join(SRC_ASSETS, 'img', name));
+    return wh ? `${tag} width="${wh[0]}" height="${wh[1]}"` : tag;
+  });
+
 const hasVideo = (name) => existsSync(path.join(SRC_ASSETS, 'video', `${name}.mp4`));
 
 const btn = (href, label, cls = 'btn-primary', icon = 'arrow') =>
@@ -113,14 +134,50 @@ const ticks = (list) => `<ul class="ticks">${list.map((f) => `<li>${icons.tick}$
 // ---------------------------------------------------------------------
 // layout
 // ---------------------------------------------------------------------
+/** Structured data (schema.org) for search engines: company on home/contacts, breadcrumbs on inner pages. */
+function jsonLd(t, pageKey, title, url) {
+  if (!site.baseUrl) return '';
+  const org = {
+    '@type': 'Organization',
+    '@id': `${site.baseUrl}/#organization`,
+    name: site.name,
+    url: `${site.baseUrl}/`,
+    logo: `${site.baseUrl}/assets/img/logo-mark.png`,
+    image: `${site.baseUrl}/assets/img/og-image.jpg`,
+    description: t.home.description,
+    email: site.email,
+    telephone: site.phoneLink,
+    address: { '@type': 'PostalAddress', addressLocality: t.address.split(',')[0].trim(), addressCountry: 'TM' },
+    areaServed: 'TM',
+    brand: [{ '@type': 'Brand', name: 'ALTYN PAMYK' }],
+    contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', telephone: site.phoneLink, email: site.email, availableLanguage: ['Turkmen', 'Russian', 'English'] }],
+  };
+  const graph = [];
+  if (pageKey === 'home') {
+    graph.push(org, { '@type': 'WebSite', '@id': `${site.baseUrl}/#website`, url: `${site.baseUrl}/`, name: site.name, inLanguage: LANGS.map((l) => l.code), publisher: { '@id': org['@id'] } });
+  } else {
+    if (pageKey === 'contacts') graph.push(org);
+    graph.push({
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.ui.breadcrumbHome, item: url(t.code).replace(/[^/]*$/, '') },
+        { '@type': 'ListItem', position: 2, name: title, item: url(t.code) },
+      ],
+    });
+  }
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+  return `<script type="application/ld+json">${json}</script>`;
+}
+
 function layout(t, pageKey, { title, description, body }) {
   const file = PAGES[pageKey];
-  const fullTitle = pageKey === 'home' ? `${site.name} — ${title}` : `${title} — ${site.name}`;
+  const fullTitle = t[pageKey]?.metaTitle || (pageKey === 'home' ? `${site.name} — ${title}` : `${title} — ${site.name}`);
   const url = (code) => (site.baseUrl ? `${site.baseUrl}/${code}/${file === 'index.html' ? '' : file}` : '');
 
   const alternates = site.baseUrl
     ? LANGS.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${url(l.code)}">`).join('\n  ') +
-      `\n  <link rel="alternate" hreflang="x-default" href="${url(DEFAULT_LANG)}">\n  <link rel="canonical" href="${url(t.code)}">`
+      // home pages: x-default is the language-picking root page; other pages: the default language
+      `\n  <link rel="alternate" hreflang="x-default" href="${file === 'index.html' ? `${site.baseUrl}/` : url(DEFAULT_LANG)}">\n  <link rel="canonical" href="${url(t.code)}">`
     : '';
 
   const navLinks = NAV.map(
@@ -151,8 +208,12 @@ function layout(t, pageKey, { title, description, body }) {
   ${site.baseUrl ? `<meta property="og:image" content="${site.baseUrl}/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(site.name)}">
   <meta name="twitter:card" content="summary_large_image">` : ''}
-  ${alternates}
+  ${LANGS.filter((l) => l.code !== t.code).map((l) => `<meta property="og:locale:alternate" content="${l.locale}">`).join('\n  ')}
+  ${[site.googleVerification && `<meta name="google-site-verification" content="${esc(site.googleVerification)}">`,
+     site.yandexVerification && `<meta name="yandex-verification" content="${esc(site.yandexVerification)}">`, alternates].filter(Boolean).join('\n  ')}
+  ${jsonLd(t, pageKey, title, url)}
   <link rel="icon" href="../assets/img/favicon.png" type="image/png">
   <link rel="preload" href="../assets/fonts/manrope-${t.code === 'ru' ? 'cyrillic' : t.code === 'tk' ? 'latin-ext' : 'latin'}-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="${A('css/style.css')}">
@@ -251,7 +312,7 @@ function directionCard(t, key) {
   const img = photo(m.photo);
   return `<article class="dir-card">
           <a class="dir-card-media${img ? ' has-photo' : ''}" href="${PAGES[key]}" tabindex="-1" aria-hidden="true">${
-            img ? `<img src="${img}" alt="" loading="lazy">` : illustrations[m.illu]
+            img ? `<img src="${img}" alt="${esc(d.name)}" loading="lazy">` : illustrations[m.illu]
           }</a>
           <div class="dir-card-body">
             <h3><a href="${PAGES[key]}">${esc(d.name)}</a></h3>
@@ -501,7 +562,7 @@ function pageExport(t) {
 
     <section class="section">
       <div class="container split split-top">
-        <div class="split-media"><figure class="media media-tall"><img src="${photo('export-lint')}" alt="${esc(x.photoLabel)}" loading="lazy"></figure></div>
+        <div class="split-media"><figure class="media media-tall"><img src="${photo('export-lint')}" alt="${esc(x.photoLabel)}" fetchpriority="high"></figure></div>
         <div >
           ${stats(x.stats)}
           <div class="prose">${x.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
@@ -619,7 +680,8 @@ function rootIndex() {
   <title>${esc(site.name)}</title>
   <meta name="description" content="${esc(LANGS.find((l) => l.code === DEFAULT_LANG).home.description)}">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <meta http-equiv="refresh" content="1; url=${DEFAULT_LANG}/index.html">
+  <meta http-equiv="refresh" content="0; url=${DEFAULT_LANG}/index.html">
+  ${site.baseUrl ? LANGS.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${site.baseUrl}/${l.code}/">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${site.baseUrl}/">` : ''}
   <script>
     (function () {
       var codes = ${codes}, pick = '${DEFAULT_LANG}';
@@ -647,6 +709,7 @@ function notFound() {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>404 — ${esc(site.name)}</title>
+  <meta name="robots" content="noindex">
   <style>
     body{font:16px system-ui,sans-serif;background:#fff;color:#16233a;margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box}
     main{display:grid;gap:32px;max-width:640px}
@@ -662,10 +725,16 @@ function notFound() {
 
 function sitemap() {
   if (!site.baseUrl) return null;
+  const today = new Date().toISOString().slice(0, 10);
+  const loc = (code, f) => `${site.baseUrl}/${code}/${f === 'index.html' ? '' : f}`;
   const urls = LANGS.flatMap((l) =>
-    Object.values(PAGES).map((f) => `  <url><loc>${site.baseUrl}/${l.code}/${f === 'index.html' ? '' : f}</loc></url>`),
+    Object.values(PAGES).map((f) => {
+      const alts = LANGS.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.code}" href="${loc(a.code, f)}"/>`)
+        .concat(`    <xhtml:link rel="alternate" hreflang="x-default" href="${f === 'index.html' ? `${site.baseUrl}/` : loc(DEFAULT_LANG, f)}"/>`);
+      return `  <url>\n    <loc>${loc(l.code, f)}</loc>\n    <lastmod>${today}</lastmod>\n${alts.join('\n')}\n  </url>`;
+    }),
   );
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join('\n')}\n</urlset>\n`;
 }
 
 // ---------------------------------------------------------------------
@@ -699,7 +768,7 @@ function checkLocales() {
 async function write(rel, content) {
   const file = path.join(OUT, rel);
   await fs.mkdir(path.dirname(file), { recursive: true });
-  await fs.writeFile(file, content);
+  await fs.writeFile(file, rel.endsWith('.html') ? sizeImages(content) : content);
 }
 
 async function main() {

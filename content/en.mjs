@@ -93,6 +93,7 @@ export default {
 
   home: {
     title: 'Yarn manufacturing, cotton export, imports and distribution',
+    metaTitle: 'UMMAN TRADE — yarn, cotton export, imports, Turkmenistan', // заголовок для поисковиков (вкладка браузера)
     description: 'UMMAN TRADE — ALTYN PAMYK cotton yarn manufacturing, export of cotton linter and fibre, chemical imports and food distribution in Turkmenistan.',
     heroEyebrow: 'Turkmenistan',
     heroTitle: 'Manufacturing, export, import and wholesale trade',
@@ -124,6 +125,7 @@ export default {
 
   about: {
     title: 'About us',
+    metaTitle: 'About UMMAN TRADE — Turkmenistan', // заголовок для поисковиков (вкладка браузера)
     description: 'UMMAN TRADE is the trade mark of entrepreneur Mammedov Begench: yarn manufacturing, cotton export, chemical imports and food distribution in Turkmenistan.',
     lead: 'UMMAN TRADE is the trade mark under which entrepreneur Mammedov Begench develops manufacturing and trading businesses in Turkmenistan.',
     paragraphs: [
@@ -148,6 +150,7 @@ export default {
 
   yarn: {
     title: 'ALTYN PAMYK yarn manufacturing',
+    metaTitle: 'ALTYN PAMYK OE cotton yarn Ne 16, Ne 21 — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'ALTYN PAMYK cotton yarn: open-end (OE) spinning, Ne 16 and Ne 21, 5,000 tonnes capacity. Exclusive sales by UMMAN TRADE.',
     lead: 'Our manufacturing business is represented by cotton yarn under the ALTYN PAMYK brand.',
     paragraphs: [
@@ -196,6 +199,7 @@ export default {
 
   export: {
     title: 'Cotton export',
+    metaTitle: 'Cotton export from Turkmenistan: fibre, linter — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'Export of cotton fibre, ulyuk, linter, licker-in waste and card flat strips from Turkmenistan. 12,000 tonnes of linter in 2024–2025. HVI laboratory.',
     lead: 'Since 2024 our team has been exporting cotton products from Turkmenistan.',
     itemsTitle: 'What we export',
@@ -220,6 +224,7 @@ export default {
 
   import: {
     title: 'Chemical imports',
+    metaTitle: 'Caustic soda and UFC wholesale in Turkmenistan — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'Bulk imports of caustic soda and urea-formaldehyde concentrate (UFC) into Turkmenistan for industrial companies.',
     lead: 'We import chemical products into Turkmenistan in bulk for industrial companies.',
     itemsTitle: 'Products',
@@ -233,6 +238,7 @@ export default {
 
   food: {
     title: 'Food & FMCG',
+    metaTitle: 'Food and FMCG wholesale in Turkmenistan — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'Distribution and wholesale of food, beverages and FMCG in Turkmenistan: Vedrenne, Giffard, Kimbo; sugar, rice, flour.',
     lead: 'Under the UMMAN TRADE trade mark we develop distribution and wholesale of food, beverages and everyday consumer goods.',
     brandsTitle: 'Brands in our portfolio',
@@ -254,6 +260,7 @@ export default {
 
   contacts: {
     title: 'Contacts',
+    metaTitle: 'Contact UMMAN TRADE — Ashgabat, Turkmenistan', // заголовок для поисковиков (вкладка браузера)
     description: 'Contact UMMAN TRADE: phone, WhatsApp, e-mail. Requests for yarn, cotton products, chemicals and food products.',
     lead: 'Get in touch in the way that suits you, or send a request — we will answer your questions and prepare a commercial offer.',
   },

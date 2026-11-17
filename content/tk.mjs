@@ -94,7 +94,8 @@ export default {
 
   home: {
     title: 'Ýüplük önümçiligi, pagta eksporty, import we paýlaýyş',
-    description: 'UMMAN TRADE — ALTYN PAMYK pagta ýüplüginiň önümçiligi, pagta lintiniň we süýüminiň eksporty, himiýa önümleriniň importy, Türkmenistanda azyk önümlerini paýlamak.',
+    metaTitle: 'UMMAN TRADE — ýüplük, pagta eksporty, import, Türkmenistan', // заголовок для поисковиков (вкладка браузера)
+    description: 'UMMAN TRADE — ALTYN PAMYK ýüplügi, pagta lintiniň we süýüminiň eksporty, himiýa önümleriniň importy we azyk önümleri Türkmenistanda.',
     heroEyebrow: 'Türkmenistan',
     heroTitle: 'Önümçilik, eksport, import we lomaý söwda',
     heroText: 'Pagta ýüplügini öndürýäris, pagta önümlerini eksport edýäris, senagat üçin himiýa önümlerini import edýäris we azyk önümlerini paýlaýyşy ösdürýäris.',
@@ -125,6 +126,7 @@ export default {
 
   about: {
     title: 'Biz barada',
+    metaTitle: 'UMMAN TRADE barada — Türkmenistan', // заголовок для поисковиков (вкладка браузера)
     description: 'UMMAN TRADE — telekeçi Mammedow Begenjiň haryt nyşany: ýüplük önümçiligi, pagta eksporty, himiýa önümleriniň importy we Türkmenistanda azyk önümlerini paýlamak.',
     lead: 'UMMAN TRADE — telekeçi Mammedow Begenjiň Türkmenistanda önümçilik we söwda ugurlaryny ösdürýän haryt nyşany.',
     paragraphs: [
@@ -149,6 +151,7 @@ export default {
 
   yarn: {
     title: 'ALTYN PAMYK ýüplük önümçiligi',
+    metaTitle: 'ALTYN PAMYK OE pagta ýüplügi Ne 16, Ne 21 — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'ALTYN PAMYK pagta ýüplügi: pnewmomehaniki OE egriş, Ne 16 we Ne 21, 5 000 tonna kuwwat. Ýeke-täk satyjy — UMMAN TRADE.',
     lead: 'Önümçilik ugry ALTYN PAMYK haryt nyşany bilen pagta ýüplügi bilen görkezilýär.',
     paragraphs: [
@@ -197,7 +200,8 @@ export default {
 
   export: {
     title: 'Pagta önümleriniň eksporty',
-    description: 'Türkmenistandan pagta süýüminiň, ülüginiň, lintiniň (linteriň), daraýjy maşynyň we kard galyndylarynyň eksporty. 2024–2025 ýyllarda 12 000 tonna lint. HVI barlaghanasy.',
+    metaTitle: 'Türkmenistandan pagta eksporty: süýüm, lint — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
+    description: 'Türkmenistandan pagta süýüminiň, ülüginiň, lintiniň (linteriň), daraýjy maşynyň we kard galyndylarynyň eksporty. 2024–2025 ýyllarda 12 000 tonna lint.',
     lead: '2024-nji ýyldan bäri toparymyz Türkmenistandan pagta önümlerini eksport edýär.',
     itemsTitle: 'Näme eksport edýäris',
     items: [
@@ -221,6 +225,7 @@ export default {
 
   import: {
     title: 'Himiýa önümleriniň importy',
+    metaTitle: 'Kaustik soda we KFK lomaý Türkmenistanda — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'Senagat kärhanalary üçin Türkmenistana kaustik sodany we karbamid-formaldegid konsentratyny (KFK) uly lomaý möçberde import etmek.',
     lead: 'Senagat kärhanalary üçin Türkmenistana himiýa önümlerini uly lomaý möçberde import edýäris.',
     itemsTitle: 'Önümler',
@@ -234,6 +239,7 @@ export default {
 
   food: {
     title: 'Azyk önümleri we FMCG',
+    metaTitle: 'Azyk önümleri we FMCG lomaý Türkmenistanda — UMMAN TRADE', // заголовок для поисковиков (вкладка браузера)
     description: 'Türkmenistanda azyk önümlerini, içgileri we FMCG harytlaryny paýlamak we lomaý söwda: Vedrenne, Giffard, Kimbo; şeker, tüwi, un.',
     lead: 'UMMAN TRADE haryt nyşany bilen azyk önümlerini, içgileri we gündelik sarp ediş harytlaryny paýlamagy we lomaý söwdasyny ösdürýäris.',
     brandsTitle: 'Brendlerimiz',
@@ -255,6 +261,7 @@ export default {
 
   contacts: {
     title: 'Habarlaşmak',
+    metaTitle: 'UMMAN TRADE bilen habarlaşmak — Aşgabat, Türkmenistan', // заголовок для поисковиков (вкладка браузера)
     description: 'UMMAN TRADE bilen habarlaşmak: telefon, WhatsApp, e-poçta. Ýüplük, pagta we himiýa önümleri, azyk önümleri üçin ýüz tutmalar.',
     lead: 'Biz bilen habarlaşyň — ähli soraglaryňyza jogap bereris we täjirçilik teklibini taýýarlarys.',
   },
