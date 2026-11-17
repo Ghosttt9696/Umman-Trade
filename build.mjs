@@ -680,6 +680,8 @@ function rootIndex() {
   <title>${esc(site.name)}</title>
   <meta name="description" content="${esc(LANGS.find((l) => l.code === DEFAULT_LANG).home.description)}">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  ${site.yandexVerification ? `<meta name="yandex-verification" content="${esc(site.yandexVerification)}">` : ''}
+  ${site.googleVerification ? `<meta name="google-site-verification" content="${esc(site.googleVerification)}">` : ''}
   <meta http-equiv="refresh" content="0; url=${DEFAULT_LANG}/index.html">
   ${site.baseUrl ? LANGS.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${site.baseUrl}/${l.code}/">`).join('\n  ') + `\n  <link rel="alternate" hreflang="x-default" href="${site.baseUrl}/">` : ''}
   <script>
