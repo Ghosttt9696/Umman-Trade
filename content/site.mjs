@@ -37,5 +37,5 @@ export default {
   // Google Search Console: https://search.google.com/search-console
   // Яндекс Вебмастер:     https://webmaster.yandex.ru
   googleVerification: '',
-  yandexVerification: '',
+  yandexVerification: 'b4f9ee61ecb90cb7',
 };
